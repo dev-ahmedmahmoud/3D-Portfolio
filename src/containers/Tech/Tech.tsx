@@ -1,5 +1,4 @@
 import {
-  html,
   javascript,
   typescript,
   reactjs,
@@ -7,7 +6,6 @@ import {
   tailwind,
   threejs,
   git,
-  css,
   unity,
   openxr,
   androidxr,

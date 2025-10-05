@@ -12,7 +12,7 @@ const LanguageSwitchArrow = () => {
     router.push(
       `${locale === routing.locales[0] ? routing.locales[1] : routing.locales[0]}`
     );
-  }, []);
+  }, [locale, router]);
 
   return (
     <button

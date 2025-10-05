@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import type { ITestimonial } from "@/types";
 import { fadeIn } from "@/utils/animations/motion";
+import Image from "../Image/Image";
 
 interface ITestimonialCardProps {
   testimonial: ITestimonial;
@@ -17,7 +18,7 @@ const TestimonialCard = ({ testimonial, index }: ITestimonialCardProps) => {
       {...fadeIn(undefined, "spring", index * 0.5, 0.75)}
       className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full flex flex-col justify-between"
     >
-      <p className="text-white font-black text-[48px]">"</p>
+      <p className="text-white font-black text-[48px]">&quot;</p>
 
       <div className="flex flex-col flex-1 justify-between mt-1">
         <p className="text-white tracking-wider text-[18px]">
@@ -37,10 +38,11 @@ const TestimonialCard = ({ testimonial, index }: ITestimonialCardProps) => {
             </p>
           </div>
 
-          <img
+          <Image
             src={image}
             alt={`feedback_by-${name}`}
-            className="w-10 h-10 rounded-full object-cover"
+            tailWindWidth={"w-10"}
+            tailWindHeight={"h-10"}
           />
         </div>
       </div>

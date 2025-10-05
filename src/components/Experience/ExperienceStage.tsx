@@ -1,5 +1,6 @@
-import type { IExperience } from "@/types";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import Image from "../Image/Image";
+import type { IExperience } from "@/types";
 
 interface IExperienceStageProps {
   experience: IExperience;
@@ -19,10 +20,12 @@ const ExperienceStage = ({ experience }: IExperienceStageProps) => {
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
-          <img
+          <Image
+            contain
             src={experience.icon}
             alt={experience.companyName}
-            className="w-[60%] h-[60%] object-contain"
+            tailWindWidth={"w-[60%]"}
+            tailWindHeight={"h-[60%]"}
           />
         </div>
       }
