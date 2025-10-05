@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "title": "Ahmed | XR & Nextjs Developer",
+    "description": "Portfolio of Ahmed, showcasing immersive 3D, and Next.js projects with cutting-edge UI/UX.",
+    "keywords": {
+      "nextjs": "Next.js 14 developer",
+      "3dPortfolio": "3D Portfolio",
+      "3dWeb": "3D web apps",
+      "reactThree": "React Three Fiber",
+      "framerMotion": "Framer Motion",
+      "immersive": "Immersive experiences"
+    },
+    "openGraph": {
+      "title": "Ahmed | XR & Nextjs Developer",
+      "description": "Immersive 3D portfolio built with Next.js 14, React Three Fiber, and Framer Motion.",
+      "images": {
+        "alt": "Ahmed Portfolio Preview"
+      }
+    },
+    "twitter": {
+      "title": "Ahmed | XR & Nextjs Developer",
+      "description": "Immersive 3D portfolio built with Next.js 14."
+    },
+    "jsonLd": {
+      "jobTitle": "XR & Nextjs Developer"
+    }
+  },
+  "navbar": {
+    "mastery": "XR Mastery",
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headlinePart1": "Hello I am",
+    "headlinePart2": "Ahmed",
+    "paragraphPart1": "I develop XR Experiences",
+    "parahraphPart2": "3D visuals, and Nextjs apps"
+  },
+  "about": {
+    "introductionHeadline": "Introduction",
+    "overview": "Overview",
+    "introduction": "Hey there! I am Ahmed, a frontend developer with 8 years of experience designing and building immersive 2D and 3D user interfaces. This strong foundation made my transition into the XR world seamless, allowing me to quickly adapt and create stunning, interactive applications that push the boundaries of digital experiences. By combining aesthetic precision with cutting-edge technology, I bring ideas to life in ways that feel natural, engaging, and future-ready. Let’s explore how innovation in XR can transform the way we interact with technology!",
+    "services": {
+      "arvr": "Augmented/Virtual Reality Apps",
+      "mr": "Mixed Reality Apps",
+      "nextjs": "Nextjs/Reactjs Apps",
+      "reactNative": "React Native Apps"
+    }
+  },
+  "experience": {
+    "headline": "Work Experience",
+    "subHeadline": "What I Have Done So Far",
+    "experiences": {
+      "reactAndReactNative": {
+        "title": "React.js / React Native Developer",
+        "companyName": "Freelancer",
+        "date": "Jan 2017 - Oct 2020",
+        "points": {
+          "point1": "Developed and deployed responsive web and mobile applications using React and React Native, optimizing performance across iOS, Android, and modern browsers.",
+          "point2": "Integrated RESTful APIs and GraphQL endpoints with dynamic state management using Redux, Context API, and custom hooks.",
+          "point3": "Led front-end testing initiatives with Jest and React Testing Library, ensuring 95%+ code coverage and smooth CI/CD pipelines.",
+          "point4": "Translated complex UI/UX designs into pixel-perfect components using Styled Components, Tailwind CSS, and React Navigation"
+        }
+      },
+      "cto": {
+        "title": "Chief Technolofy Officer",
+        "companyName": "Syncology eServices",
+        "date": "Jan 2020 - Present",
+        "points": {
+          "point1": "I lead the architecture and development of comprehensive software solutions tailored for educational institutions across the globe. My focus spans the full lifecycle of our core platforms—EduSync LMS, a robust Learning Management System, and EduSync SMS, a complete School Management System—each designed to adapt to the diverse needs of various educational systems worldwide.",
+          "point2": "From product strategy and technical oversight to ensuring scalability and adaptability, I drive the vision behind creating intelligent, user-centric platforms that simplify and enhance the educational experience for students, educators, and administrators alike."
+        }
+      },
+      "nextjs": {
+        "title": "Nextjs Developer",
+        "companyName": "unitedprint SE",
+        "date": "Dec 2020 - Present",
+        "points": {
+          "point1": "Built high-performance, SEO-optimized, multilingual web applications using Next.js, leveraging server-side rendering (SSR) and static site generation (SSG).",
+          "point2": "Integrated dynamic APIs and third-party services with middleware, routing, and API routes for scalable backend logic",
+          "point3": "Designed modular, reusable components with TypeScript, Tailwind CSS, and React Query for clean architecture.",
+          "point4": "Incremental and full migration from pages router architecture to app router architecture powered by React Server Components."
+        }
+      },
+      "xr": {
+        "title": "XR Developer",
+        "companyName": "Freelancer",
+        "date": "Jan 2025 - Present",
+        "points": {
+          "point1": "Developed immersive XR experiences using Unity, WebXR, and Three.js, tailored for Meta Quest and browser-based platforms.",
+          "point2": "Implemented spatial interactions, gesture recognition, and physics-based environments for realistic user engagement.",
+          "point3": "Integrated XR content with backend systems using Firebase, GraphQL, and real-time data streams.",
+          "point4": "Delivered cross-platform prototypes for AR, VR, and MR, optimizing performance across mobile, headset, and desktop devices."
+        }
+      }
+    }
+  },
+  "projects": {
+    "mywork": "My Work",
+    "projectsSubheadline": "Projects",
+    "introduction": "Real-world challenges sharpen more than just skills — they shape perspective. Each project reflects not only technical growth, but strategic thinking under pressure. From concept to deployment, I’ve learned that execution teaches what theory can’t. This section showcases the practical journey behind the knowledge I bring forward.",
+    "projects": {
+      "3dPortfolio": {
+        "name": "Multilingual 3D-Portfolio",
+        "description": "This interactive web portfolio is built with Next.js, React Three Fiber, and Framer Motion, showcasing dynamic 3D scenes and smooth transitions. It highlights my ability to craft immersive user experiences using WebGL-powered components, real-time animations, and spatial storytelling — all optimized for performance and responsiveness.",
+        "tags": {
+          "tag1": "Nextjs",
+          "tag2": "Threejs",
+          "tag3": "framer-motion",
+          "tag4": "Tailwind"
+        }
+      }
+    }
+  },
+  "testimonials": {
+    "peopleSay": "What collaborators say",
+    "testimonialsSubheadline": "Testimonials",
+    "testimonials": {
+      "testimonial1": {
+        "name": "Anne",
+        "designation": "Frontend Lead",
+        "company": "unitedprint SE",
+        "body": "Ahmed has a rare ability to balance technical depth with strategic foresight. His planning skills kept our sprints focused and efficient, and his micro-leadership style empowered junior developers to contribute confidently. Working with him elevated the entire frontend team."
+      },
+      "testimonial2": {
+        "name": "Cindy",
+        "designation": "Department Head",
+        "company": "unitedprint SE",
+        "body": "Ahmed consistently brings clarity to complex projects. His timeline management is precise, and he’s exceptional at aligning team members around shared goals. His calm leadership and attention to detail make him a reliable force in any tech initiative."
+      },
+      "testimonial3": {
+        "name": "Andreas",
+        "designation": "Senior Engineer",
+        "company": "NXP Semiconductors",
+        "body": "During his time at NXP, Ahmed showed outstanding initiative in coordinating cross-functional tasks. He was instrumental in keeping our roadmap on track and fostering collaboration between frontend and backend teams. His leadership was subtle but highly effective."
+      }
+    }
+  },
+  "contact": {
+    "getInTouch": "Get in touch",
+    "contactSubheadline": "Contact",
+    "contactSuccess": "Message received!. I promise, I will get back to you",
+    "contactFail": "Sorry I couldn't get your message. Problem Reported and I am right on it",
+    "namePlaceholder": "What's your good name?",
+    "emailPlaceholder": "What's your web address?",
+    "messagePlaceholder": "Got anything good for me?",
+    "submitButtonIdle": "Make Contant",
+    "submitButtonLoading": "Bits are racing through cables now..."
+  }
+}

@@ -1,0 +1,88 @@
+import {
+  html,
+  javascript,
+  typescript,
+  reactjs,
+  redux,
+  tailwind,
+  threejs,
+  git,
+  css,
+  unity,
+  openxr,
+  androidxr,
+  realitykit,
+  webxr,
+} from "@/assets";
+import { Ball3D } from "@/canvas";
+import { SectionWrapper } from "@/hocs";
+
+interface ITechnology {
+  name: string;
+  icon: string;
+}
+
+const technologies: ITechnology[] = [
+  {
+    name: "Unity",
+    icon: unity,
+  },
+  {
+    name: "OpenXR",
+    icon: openxr,
+  },
+  {
+    name: "AndroidXR",
+    icon: androidxr,
+  },
+  {
+    name: "WebXR",
+    icon: webxr,
+  },
+  {
+    name: "RealityKit",
+    icon: realitykit,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "git",
+    icon: git,
+  },
+];
+
+const Tech = () => {
+  return (
+    <div className="flex flex-row flex-wrap justify-center gap-10">
+      {technologies.map((technology) => (
+        <div className="w-28 h-28" key={technology.name}>
+          <Ball3D imgUrl={technology.icon} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default SectionWrapper({ Component: Tech, idName: "tech" });
