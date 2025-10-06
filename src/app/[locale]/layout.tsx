@@ -66,6 +66,16 @@ export async function generateMetadata({
       images: ["https://ahmedmahmoud.de/og-image.png"],
       creator: "@AhmedSa05787736",
     },
+    icons: {
+      icon: [
+        { url: "/imgs/favicon.ico" }, // default
+        { url: "/imgs/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/imgs/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/imgs/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+        { url: "/imgs/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      ],
+      apple: [{ url: "/imgs/apple-touch-icon.png", sizes: "180x180" }],
+    },
   };
 }
 
