@@ -102,8 +102,8 @@ export default async function LocaleLayout(props: ILayoutProps) {
           {children}
           <Toaster position="top-center" />
         </NextIntlClientProvider>
+        <StructuredData />
       </body>
-      <StructuredData />
     </html>
   );
 }

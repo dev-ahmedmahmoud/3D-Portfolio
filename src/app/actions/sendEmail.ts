@@ -1,5 +1,6 @@
 "use server";
 
+import nodemailer from "nodemailer";
 import { z } from "zod";
 
 const schema = z.object({
@@ -27,24 +28,30 @@ export async function sendEmail(formData: FormData) {
 
   const { name, email, message } = parsed.data;
 
-  // Call EmailJS REST API securely
-  const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      type: "OAuth2",
+      user: process.env.EMAIL_USER,
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
+      refreshToken: process.env.REFRESH_TOKEN,
+      accessToken: process.env.ACCESS_TOKEN,
     },
-    body: JSON.stringify({
-      service_id: process.env.EMAILJS_SERVICE_ID,
-      template_id: process.env.EMAILJS_TEMPLATE_ID,
-      user_id: process.env.EMAILJS_PUBLIC_KEY,
-      accessToken: process.env.EMAILJS_PRIVATE_KEY, // keep this secret
-      template_params: { name, email, message },
-    }),
   });
 
-  if (!res.ok) {
-    return { success: false, errors: { general: ["Failed to send email"] } };
-  }
+  const mailOptions = {
+    from: `"${name}" <${email}>`,
+    to: process.env.EMAIL_USER!,
+    subject: "New message from your portfolio",
+    text: message,
+  };
 
-  return { success: true };
+  try {
+    await transporter.sendMail(mailOptions);
+    return { success: true };
+  } catch (error) {
+    console.error("Email error:", error);
+    return { success: false, error };
+  }
 }
