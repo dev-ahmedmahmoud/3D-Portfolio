@@ -1,32 +1,43 @@
-import { useTransition } from "react";
+import { useEffect } from "react";
+import { useFormState } from "react-dom";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/hocs";
 import { slideIn } from "@/utils/animations/motion";
-import { sendEmail } from "@/app/actions/sendEmail";
+import { ISendEmailResult, sendEmail } from "@/app/actions/sendEmail";
 import { Earth3D } from "@/canvas";
 import { useContent } from "@/hooks";
 import type { IContactContent } from "@/hooks";
+import { FormSubmitButton } from "@/components";
 
 const Contact = () => {
   const contactContent = useContent("contact")() as IContactContent;
-  const [isPending, startTransition] = useTransition();
+  const [state, formAction] = useFormState<ISendEmailResult, FormData>(
+    sendEmail,
+    {
+      success: null,
+      error: "",
+    }
+  );
 
-  const handleSubmit = (formData: FormData) => {
-    startTransition(async () => {
-      const result = await sendEmail(formData);
-
-      if (result.success) {
-        toast.success(contactContent.contactSuccess);
-      } else {
-        toast.error(result.errors?.general?.[0] || contactContent.contactFail);
-      }
-    });
-  };
+  useEffect(() => {
+    if (state.success === null) {
+      return;
+    }
+    if (state.success) {
+      toast.success(contactContent.contactSuccess);
+    } else {
+      const translatedError =
+        contactContent[state.error as keyof IContactContent];
+      toast.error(translatedError || contactContent.contactFail);
+    }
+  }, [state.success, state.error, contactContent]);
 
   return (
     <div
-      className={"sm:px-16 px-6 xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden"}
+      className={
+        "sm:px-16 px-6 xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden"
+      }
     >
       <motion.div
         initial="hidden"
@@ -42,7 +53,7 @@ const Contact = () => {
           {contactContent.subHeadline}
         </h3>
 
-        <form action={handleSubmit} className="mt-12 flex flex-col gap-8">
+        <form action={formAction} className="mt-12 flex flex-col gap-8">
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -73,16 +84,10 @@ const Contact = () => {
               placeholder={contactContent.messagePlaceholder}
             />
           </label>
-
-          <button
-            type="submit"
-            disabled={isPending}
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {isPending
-              ? contactContent.submitButtonLoading
-              : contactContent.submitButtonIdle}
-          </button>
+          <FormSubmitButton
+            buttonTextIdle={contactContent.submitButtonIdle}
+            buttonTextPending={contactContent.submitButtonLoading}
+          />
         </form>
       </motion.div>
 
@@ -99,4 +104,8 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper({ Component: Contact, idName: "contact", paddingNoMargin: true });
+export default SectionWrapper({
+  Component: Contact,
+  idName: "contact",
+  paddingNoMargin: true,
+});

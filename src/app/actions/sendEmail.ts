@@ -1,32 +1,51 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import { google } from "googleapis";
 import { z } from "zod";
 
+export interface ISendEmailResult {
+  success: boolean | null;
+  error: string;
+}
+
 const schema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.email("Invalid email"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string().min(2, "nameInvalid"),
+  email: z.email("emailInvalid"),
+  message: z.string().min(10, "messageInvalid"),
 });
 
-export async function sendEmail(formData: FormData) {
+export async function sendEmail(
+  _prevState: ISendEmailResult,
+  formData: FormData
+): Promise<ISendEmailResult> {
   const raw = Object.fromEntries(formData);
   const parsed = schema.safeParse(raw);
 
   if (!parsed.success) {
     const tree = z.treeifyError(parsed.error);
 
-    const errors: Record<string, string> = {};
     for (const [field, detail] of Object.entries(tree.properties ?? {})) {
-      if (detail.errors.length > 0) {
-        errors[field] = detail.errors[0];
+      if (field && detail.errors.length > 0) {
+        return { success: false, error: detail.errors[0] };;
       }
     }
 
-    return { success: false, errors };
+    return { success: false, error: "" };
   }
-
   const { name, email, message } = parsed.data;
+
+  const oAuth2Client = new google.auth.OAuth2(
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    "https://developers.google.com/oauthplayground" // redirect URI
+  );
+
+  oAuth2Client.setCredentials({
+    refresh_token: process.env.REFRESH_TOKEN,
+  });
+
+  const accessToken = await oAuth2Client.getAccessToken();
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -36,7 +55,7 @@ export async function sendEmail(formData: FormData) {
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       refreshToken: process.env.REFRESH_TOKEN,
-      accessToken: process.env.ACCESS_TOKEN,
+      accessToken: accessToken?.token ?? "",
     },
   });
 
@@ -49,9 +68,11 @@ export async function sendEmail(formData: FormData) {
 
   try {
     await transporter.sendMail(mailOptions);
-    return { success: true };
+    return { success: true, error: "" };
   } catch (error) {
     console.error("Email error:", error);
-    return { success: false, error };
+    const message =
+      error instanceof Error ? error.message : "Failed to send email.";
+    return { success: false, error: message };
   }
 }

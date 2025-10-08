@@ -69,6 +69,9 @@ export interface IContactContent extends IContent {
   messagePlaceholder: string;
   submitButtonIdle: string;
   submitButtonLoading: string;
+  nameInvalid: string;
+  emailInvalid: string;
+  messageInvalid: string;
 }
 
 interface ContentReturnType {
@@ -265,6 +268,9 @@ export const useContent = (section: ContentSection): ContentReturnType => {
       messagePlaceholder: t("messagePlaceholder"),
       submitButtonIdle: t("submitButtonIdle"),
       submitButtonLoading: t("submitButtonLoading"),
+      nameInvalid: t("nameInvalid"),
+      emailInvalid: t("emailInvalid"),
+      messageInvalid: t("messageInvalid"),
     };
   };
 

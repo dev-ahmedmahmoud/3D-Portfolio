@@ -146,6 +146,9 @@
     "emailPlaceholder": "What's your web address?",
     "messagePlaceholder": "Got anything good for me?",
     "submitButtonIdle": "Make Contant",
-    "submitButtonLoading": "Bits are racing through cables now..."
+    "submitButtonLoading": "Bits are racing through cables now...",
+    "nameInvalid": "What kind of name is that?!",
+    "emailInvalid": "What kind of email is that?!",
+    "messageInvalid": "What a message! less than 10 characters!"
   }
 }

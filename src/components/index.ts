@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
 import ExperienceStage from "./Experience/ExperienceStage";
 import LanguageSwitch from "./LanguageSwitch/LanguageSwitch";
+import FormSubmitButton from "./FormSubmitButton/FormSubmitButton";
 
 export {
   AnimatedSectionHead,
@@ -16,4 +17,5 @@ export {
   TestimonialCard,
   ExperienceStage,
   LanguageSwitch,
+  FormSubmitButton,
 };

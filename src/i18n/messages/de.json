@@ -146,6 +146,9 @@
     "emailPlaceholder": "Wat is dein Web-Adresse?",
     "messagePlaceholder": "Haste was Feines für mich?",
     "submitButtonIdle": "Kontäkt machn",
-    "submitButtonLoading": "Bits flitzen grad durch de Kabel..."
+    "submitButtonLoading": "Bits flitzen grad durch de Kabel...",
+    "nameInvalid": "Was ist das denn für ein Name?!",
+    "emailInvalid": "Was ist das denn für eine E-Mail?!",
+    "messageInvalid": "Was für eine Nachricht! Weniger als 10 Zeichen!"
   }
 }
