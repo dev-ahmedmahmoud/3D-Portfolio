@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useFormState } from "react-dom";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
@@ -11,6 +11,7 @@ import type { IContactContent } from "@/hooks";
 import { FormSubmitButton } from "@/components";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const contactContent = useContent("contact")() as IContactContent;
   const [state, formAction] = useFormState<ISendEmailResult, FormData>(
     sendEmail,
@@ -26,12 +27,13 @@ const Contact = () => {
     }
     if (state.success) {
       toast.success(contactContent.contactSuccess);
+      formRef.current?.reset();
     } else {
       const translatedError =
         contactContent[state.error as keyof IContactContent];
       toast.error(translatedError || contactContent.contactFail);
     }
-  }, [state.success, state.error, contactContent]);
+  }, [state.success, state.error, contactContent, formRef.current]);
 
   return (
     <div
@@ -53,7 +55,11 @@ const Contact = () => {
           {contactContent.subHeadline}
         </h3>
 
-        <form action={formAction} className="mt-12 flex flex-col gap-8">
+        <form
+          ref={formRef}
+          action={formAction}
+          className="mt-12 flex flex-col gap-8"
+        >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input

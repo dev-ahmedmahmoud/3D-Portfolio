@@ -27,7 +27,7 @@ export async function sendEmail(
 
     for (const [field, detail] of Object.entries(tree.properties ?? {})) {
       if (field && detail.errors.length > 0) {
-        return { success: false, error: detail.errors[0] };;
+        return { success: false, error: detail.errors[0] };
       }
     }
 
