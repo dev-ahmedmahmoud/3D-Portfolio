@@ -1,12 +1,41 @@
+import { useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 
-interface ComputerProps {
-  isMobile: boolean;
-  isTablet: boolean;
+interface IModelPosition {
+  scale: number;
+  position: [number, number, number];
 }
 
-const Computer3DModel = ({ isMobile, isTablet }: ComputerProps) => {
+const mapWidthToPosition = (width: number): IModelPosition => {
+  return width <= 450
+    ? { scale: 0.325, position: [0, -1.3, -0.5] }
+    : width <= 500
+      ? { scale: 0.325, position: [0, -1.7, -0.5] }
+      : width <= 586
+        ? { scale: 0.45, position: [0, -2.5, -0.7] }
+        : width <= 639
+        ? { scale: 0.45, position: [0, -2.0, -0.7] }
+        : width <= 762
+        ? { scale: 0.4, position: [0, -2.7, -0.7] }
+        : width <= 1024
+        ? { scale: 0.5, position: [0, -2.3, -0.7] }
+        : { scale: 0.6, position: [0, -2.5, -1.2] };
+};
+
+const Computer3DModel = () => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
+
+  const [modelPosition, setModelPosition] = useState<IModelPosition>(
+    mapWidthToPosition(window.innerWidth)
+  );
+
+  useEffect(() => {
+    const handleResize = () =>
+      setModelPosition(mapWidthToPosition(window.innerWidth));
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <mesh>
@@ -22,14 +51,8 @@ const Computer3DModel = ({ isMobile, isTablet }: ComputerProps) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.325 : isTablet ? 0.45 : 0.7}
-        position={
-          isMobile
-            ? [0, -1.3, -0.5]
-            : isTablet
-              ? [0, -1.5, -0.7]
-              : [0, -2.7, -1.2]
-        }
+        scale={modelPosition.scale}
+        position={modelPosition.position}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>

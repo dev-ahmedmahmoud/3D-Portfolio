@@ -27,7 +27,7 @@ export default {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/imgs/herobg.png')",
+        "hero-pattern": "url('/imgs/herobg.webp')",
       },
     },
   },

@@ -60,11 +60,11 @@ const Navbar = () => {
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Ahmed &nbsp;
-            <span className="sm:block hidden"> | {navbarContent.headline}</span>
+            <span className="md:block hidden"> | {navbarContent.headline}</span>
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden md:flex flex-row gap-10">
           {navbarContent?.items?.map((nav: INavbarItem) => (
             <li
               key={`nav-${nav.name}`}
@@ -79,7 +79,7 @@ const Navbar = () => {
           {languageSwitchNode}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <Image
             src={toggle ? close : menu}
             alt="menu"
@@ -108,6 +108,7 @@ const Navbar = () => {
                   <a href={`#${nav.link}`}>{nav.name}</a>
                 </li>
               ))}
+              {languageSwitchNode}
             </ul>
           </div>
         </div>

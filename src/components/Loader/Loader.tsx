@@ -8,9 +8,10 @@ const Loader = () => {
       center
       style={{
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "end",
         alignItems: "center",
         flexDirection: "column",
+        height: "25vh",
       }}
     >
       <span className="canvas-loader"></span>
