@@ -22,7 +22,7 @@ const Testimonials = memo(() => {
           introduction={testimonialsContent.introduction}
         />
       </div>
-      <div className={"-mt-20 pb-14 sm:px-16 px-6 flex flex-wrap gap-7"}>
+      <div className={"-mt-20 pb-14 sm:px-16 px-6 grid grid-cols-1 mdlg2:grid-cols-2 lgxlg2:grid-cols-3 gap-x-7 gap-y-7"}>
         {testimonialsContent.testimonials.map((testimonial, index) => (
           <TestimonialCard
             key={testimonial.name}

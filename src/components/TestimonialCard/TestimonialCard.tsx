@@ -17,7 +17,7 @@ const TestimonialCard = ({ testimonial, index }: ITestimonialCardProps) => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       {...fadeIn(undefined, "spring", index * 0.5, 0.75)}
-      className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full flex flex-col justify-between"
+      className="bg-black-200 p-10 rounded-3xl mdlg2:w-[320px] lg:w-[390px] lgxlg:w-[420px] lgxlg2:w-[320px] w-full flex flex-col justify-between"
     >
       <p className="text-white font-black text-[48px]">&quot;</p>
 

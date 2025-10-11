@@ -51,7 +51,7 @@ const Contact = memo(() => {
         whileInView="show"
         viewport={{ once: true }}
         {...slideIn("left", "tween", 0.2, 1)}
-        className="flex-1 bg-black-100 p-8 rounded-2xl"
+        className="flex-1 bg-black-100 p-8 rounded-2xl min-w-0"
       >
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
           {contactContent.headline}
@@ -107,7 +107,7 @@ const Contact = memo(() => {
         whileInView="show"
         viewport={{ once: true }}
         {...slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] min-w-0"
       >
         <Earth3D />
       </motion.div>

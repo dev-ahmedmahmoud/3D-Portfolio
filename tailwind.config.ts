@@ -25,6 +25,13 @@ export default {
       },
       screens: {
         xs: "450px",
+        xss: "588px",
+        smd: "700px",
+        mdlg: "800px",
+        mdlg2: "900px",
+        mdlg3: "1000px",
+        lgxlg: "1150px",
+        lgxlg2: "1210px",
       },
       backgroundImage: {
         "hero-pattern": "url('/imgs/herobg.webp')",

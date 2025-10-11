@@ -12,7 +12,7 @@ interface IServiceCard {
 
 const ServiceCard = ({ cardIndex = 0, title, icon }: IServiceCard): JSX.Element => (
   <Tilt
-    className="xs:w-[250px] w-full"
+    className="xss:w-[250px] smd:w-[275px] md:w-[300px] mdlg:w-[325px] mdlg2:w-[375px] mdlg3:w-[425px] lgxlg:w-[250px] w-full"
     options={{
       max: 45,
       scale: 1,

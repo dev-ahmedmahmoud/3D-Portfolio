@@ -15,7 +15,7 @@ const About = memo(() => {
         introduction={aboutContent.introduction}
       />
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 grid xs:grid-cols-1 xss:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 lgxlg:grid-cols-4 gap-x-10 gap-y-10">
         {aboutContent.services.map((service, index) => (
           <ServiceCard key={service.title} cardIndex={index} {...service} />
         ))}
