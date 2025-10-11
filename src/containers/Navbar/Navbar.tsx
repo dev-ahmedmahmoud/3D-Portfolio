@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import { Image, LanguageSwitch } from "@/components";
 import { Link } from "@/i18n/routing";
 import { logo, menu, close } from "../../assets";
 import { useContent } from "@/hooks";
 import type { INavbarContent, INavbarItem } from "@/hooks";
 
-const Navbar = () => {
+const Navbar = memo(() => {
   const navbarContent = useContent("navbar")() as INavbarContent;
 
   const [active, setActive] = useState("");
@@ -115,6 +115,8 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+});
+
+Navbar.displayName = "Navbar";
 
 export default Navbar;

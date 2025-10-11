@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { textVariant, fadeIn } from "@/utils/animations/motion";
 
@@ -41,4 +42,4 @@ const AnimatedSectionHead = ({
   </>
 );
 
-export default AnimatedSectionHead;
+export default memo(AnimatedSectionHead);

@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, memo } from "react";
 import { germany, us } from "@/assets";
 import { useRouter, routing } from "@/i18n/routing";
 import { useLocale } from "next-intl";
@@ -29,4 +29,4 @@ const LanguageSwitchArrow = () => {
   );
 };
 
-export default LanguageSwitchArrow;
+export default memo(LanguageSwitchArrow);

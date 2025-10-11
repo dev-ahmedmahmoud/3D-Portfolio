@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useFormStatus } from "react-dom";
 
 interface IFormSubmitButtonProps {
@@ -21,4 +22,4 @@ const FormSubmitButton = ({
   );
 };
 
-export default FormSubmitButton;
+export default memo(FormSubmitButton);

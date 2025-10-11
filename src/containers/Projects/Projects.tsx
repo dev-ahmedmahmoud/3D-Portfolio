@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { SectionWrapper } from "@/hocs";
 import { AnimatedSectionHead, ProjectCard } from "@/components";
 import { useContent } from "@/hooks";
 import type { IProjectsContent } from "@/hooks";
 
-const Projects = () => {
+const Projects = memo(() => {
   const projectsContent = useContent("projects")() as IProjectsContent;
 
   return (
@@ -25,6 +26,8 @@ const Projects = () => {
       </div>
     </>
   );
-};
+});
+
+Projects.displayName = "Projects";
 
 export default SectionWrapper({ Component: Projects, idName: "projects" });

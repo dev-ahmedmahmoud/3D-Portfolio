@@ -1,16 +1,21 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, memo } from "react";
 import { useFormState } from "react-dom";
+import dynamic from "next/dynamic";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/hocs";
 import { slideIn } from "@/utils/animations/motion";
 import { ISendEmailResult, sendEmail } from "@/app/actions/sendEmail";
-import { Earth3D } from "@/canvas";
 import { useContent } from "@/hooks";
 import type { IContactContent } from "@/hooks";
 import { FormSubmitButton } from "@/components";
 
-const Contact = () => {
+const Earth3D = dynamic(() => import("@/canvas/Earth/EarthCanvas"), {
+  ssr: false,
+  loading: () => <p>Loading ...</p>,
+});
+
+const Contact = memo(() => {
   const formRef = useRef<HTMLFormElement>(null);
   const contactContent = useContent("contact")() as IContactContent;
   const [state, formAction] = useFormState<ISendEmailResult, FormData>(
@@ -108,7 +113,9 @@ const Contact = () => {
       </motion.div>
     </div>
   );
-};
+});
+
+Contact.displayName = "Contact";
 
 export default SectionWrapper({
   Component: Contact,

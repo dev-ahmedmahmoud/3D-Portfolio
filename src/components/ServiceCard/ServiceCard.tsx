@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Tilt } from "@jdion/tilt-react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/animations/motion";
@@ -48,4 +49,4 @@ const ServiceCard = ({ cardIndex = 0, title, icon }: IServiceCard): JSX.Element 
   </Tilt>
 );
 
-export default ServiceCard;
+export default memo(ServiceCard);

@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { useContent } from "@/hooks";
 import type { IAboutContent } from "@/hooks";
 import { SectionWrapper } from "@/hocs";
 import { AnimatedSectionHead, ServiceCard } from "@/components";
 
-const About = () => {
+const About = memo(() => {
   const aboutContent = useContent("about")() as IAboutContent;
 
   return (
@@ -21,6 +22,8 @@ const About = () => {
       </div>
     </>
   );
-};
+});
+
+About.displayName = "About";
 
 export default SectionWrapper({ Component: About, idName: "about" });

@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { SectionWrapper } from "@/hocs";
 import { AnimatedSectionHead, TestimonialCard } from "@/components";
 import { useContent } from "@/hooks";
 import type { ITestimonialsContent } from "@/hooks";
 
-const Testimonials = () => {
+const Testimonials = memo(() => {
   const testimonialsContent = useContent(
     "testimonials"
   )() as ITestimonialsContent;
@@ -32,7 +33,9 @@ const Testimonials = () => {
       </div>
     </div>
   );
-};
+});
+
+Testimonials.displayName = "Testimonials";
 
 export default SectionWrapper({
   Component: Testimonials,

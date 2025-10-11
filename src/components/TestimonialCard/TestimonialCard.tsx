@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import type { ITestimonial } from "@/types";
 import { fadeIn } from "@/utils/animations/motion";
@@ -50,4 +51,4 @@ const TestimonialCard = ({ testimonial, index }: ITestimonialCardProps) => {
   );
 };
 
-export default TestimonialCard;
+export default memo(TestimonialCard);

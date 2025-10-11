@@ -1,7 +1,12 @@
 "use client";
 
-import { NotFound4043D } from "@/canvas";
+import dynamic from "next/dynamic";
 import { Hero } from "@/containers";
+
+const NotFound4043D = dynamic(() => import("@/canvas/404/404Canvas"), {
+  ssr: false,
+  loading: () => <p>Loading ...</p>,
+});
 
 const NotFoundPage = () => {
   return (

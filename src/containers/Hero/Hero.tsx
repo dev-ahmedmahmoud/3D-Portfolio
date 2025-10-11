@@ -1,15 +1,16 @@
 "use client";
 
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { useContent } from "@/hooks";
 import type { IHeroContent, INavbarContent } from "@/hooks";
 
 interface IHeroProps {
-  model3D: React.ReactNode;
+  model3D?: React.ReactNode;
   notFound?: boolean;
 }
 
-const Hero = ({ model3D, notFound }: IHeroProps) => {
+const Hero = memo(({ model3D, notFound }: IHeroProps) => {
   const heroContent = useContent("hero")() as IHeroContent;
   const navbarContent = useContent("navbar")() as INavbarContent;
 
@@ -25,7 +26,8 @@ const Hero = ({ model3D, notFound }: IHeroProps) => {
 
         <div>
           <h1 className={`hero-head-text text-white`}>
-            {heroContent.textual[0]} <span className="text-[#915EFF]">{heroContent.textual[1]}</span>
+            {heroContent.textual[0]}{" "}
+            <span className="text-[#915EFF]">{heroContent.textual[1]}</span>
           </h1>
           <p className={`hero-sub-text mt-2 text-white-100`}>
             {heroContent.textual[2]} <br className="sm:block hidden" />
@@ -37,7 +39,10 @@ const Hero = ({ model3D, notFound }: IHeroProps) => {
       {model3D}
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href={notFound ? "/" : `#${navbarContent?.items?.[0]?.link}`}>
+        <a
+          href={notFound ? "/" : `#${navbarContent?.items?.[0]?.link}`}
+          aria-label={navbarContent?.items?.[0]?.name}
+        >
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
               animate={{
@@ -55,6 +60,8 @@ const Hero = ({ model3D, notFound }: IHeroProps) => {
       </div>
     </section>
   );
-};
+});
+
+Hero.displayName = "Hero";
 
 export default Hero;

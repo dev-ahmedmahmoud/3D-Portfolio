@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Html, useProgress } from "@react-three/drei";
 
 const Loader = () => {
@@ -29,4 +30,4 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export default memo(Loader);

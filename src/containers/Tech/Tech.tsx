@@ -1,3 +1,5 @@
+import { memo } from "react";
+import dynamic from "next/dynamic";
 import {
   javascript,
   typescript,
@@ -12,8 +14,12 @@ import {
   realitykit,
   webxr,
 } from "@/assets";
-import { Ball3D } from "@/canvas";
 import { SectionWrapper } from "@/hocs";
+
+const Ball3D = dynamic(() => import("@/canvas/Ball/BallCanvas"), {
+  ssr: false,
+  loading: () => <p>Loading ...</p>,
+});
 
 interface ITechnology {
   name: string;
@@ -71,7 +77,7 @@ const technologies: ITechnology[] = [
   },
 ];
 
-const Tech = () => {
+const Tech = memo(() => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
       {technologies.map((technology) => (
@@ -81,6 +87,8 @@ const Tech = () => {
       ))}
     </div>
   );
-};
+});
+
+Tech.displayName = "Tech";
 
 export default SectionWrapper({ Component: Tech, idName: "tech" });

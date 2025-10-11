@@ -1,10 +1,11 @@
+import { memo } from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { SectionWrapper } from "@/hocs";
 import { AnimatedSectionHead, ExperienceStage } from "@/components";
 import { useContent } from "@/hooks";
 import type { IExperienceContent } from "@/hooks";
 
-const Experience = () => {
+const Experience = memo(() => {
   const experienceContent = useContent("experience")() as IExperienceContent;
 
   return (
@@ -27,6 +28,8 @@ const Experience = () => {
       </div>
     </>
   );
-};
+});
+
+Experience.displayName = "Experience";
 
 export default SectionWrapper({ Component: Experience, idName: "experience" });

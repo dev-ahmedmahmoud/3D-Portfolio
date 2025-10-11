@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import Image from "../Image/Image";
 import type { IExperience } from "@/types";
@@ -54,4 +55,4 @@ const ExperienceStage = ({ experience }: IExperienceStageProps) => {
   );
 };
 
-export default ExperienceStage;
+export default memo(ExperienceStage);

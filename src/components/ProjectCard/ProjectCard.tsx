@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/animations/motion";
 import { Tilt } from "@jdion/tilt-react";
@@ -77,4 +78,4 @@ const ProjectCard = ({ project, index }: IProjectCardProps) => {
   );
 };
 
-export default ProjectCard;
+export default memo(ProjectCard);
