@@ -4,6 +4,8 @@ import nodemailer from "nodemailer";
 import { google } from "googleapis";
 import { z } from "zod";
 
+const EMAIL_USER = "a.samyabdelhay@gmail.com";
+
 export interface ISendEmailResult {
   success: boolean | null;
   error: string;
@@ -51,7 +53,7 @@ export async function sendEmail(
     service: "gmail",
     auth: {
       type: "OAuth2",
-      user: process.env.EMAIL_USER,
+      user: EMAIL_USER,
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       refreshToken: process.env.REFRESH_TOKEN,
@@ -61,7 +63,7 @@ export async function sendEmail(
 
   const mailOptions = {
     from: `"${name}" <${email}>`,
-    to: process.env.EMAIL_USER!,
+    to: EMAIL_USER!,
     subject: "New message from your portfolio",
     text: message,
   };

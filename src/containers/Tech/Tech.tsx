@@ -1,18 +1,15 @@
 import { memo } from "react";
 import dynamic from "next/dynamic";
 import {
-  javascript,
   typescript,
-  reactjs,
-  redux,
   tailwind,
   threejs,
-  git,
   unity,
   openxr,
   androidxr,
   realitykit,
   webxr,
+  nextjs
 } from "@/assets";
 import { SectionWrapper } from "@/hocs";
 
@@ -48,32 +45,20 @@ const technologies: ITechnology[] = [
     icon: realitykit,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Three JS",
+    icon: threejs,
   },
   {
     name: "TypeScript",
     icon: typescript,
   },
   {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Next JS",
+    icon: nextjs,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
   },
 ];
 

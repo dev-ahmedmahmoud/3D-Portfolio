@@ -15,7 +15,8 @@ interface ITag {
 
 export interface IProject {
   name: string;
-  description: string;
+  description1: string;
+  description2: string;
   tags: ITag[];
   image: string;
   source_code_link: string;

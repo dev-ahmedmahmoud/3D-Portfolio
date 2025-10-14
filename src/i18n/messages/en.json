@@ -48,6 +48,30 @@
       "reactNative": "React Native Apps"
     }
   },
+  "bentoAbout": {
+    "tiles": {
+      "tile1": {
+        "headText": "Hey there!",
+        "subText": "Hey there! I am Ahmed, a frontend developer with 8 years of experience designing and building immersive 2D and 3D user interfaces"
+      },
+      "tile2": {
+        "headText": "Tech Stack",
+        "subText": "This strong foundation made my transition into the XR world seamless, allowing me to quickly adapt and create stunning, interactive applications"
+      },
+      "tile3": {
+        "headText": "I am very flexible with time zone communications & locations",
+        "subText": "I am based in Rijeka, Croatia and open to remote work worldwide."
+      },
+      "tile4": {
+        "headText": "My Passion for Coding",
+        "subText": "By combining aesthetic precision with cutting-edge Agentic AI tools, I bring ideas to life in almost no time, in ways that feel natural, engaging, and future-ready. Let’s explore how innovation in XR can transform the way we interact with technology!"
+      },
+      "tile5": {
+        "subText": "Contact me",
+        "copyButtonText": "a.samyabdelhay@gmail.com"
+      }
+    }
+  },
   "experience": {
     "headline": "Work Experience",
     "subHeadline": "What I Have Done So Far",
@@ -103,7 +127,8 @@
     "projects": {
       "3dPortfolio": {
         "name": "Multilingual 3D-Portfolio",
-        "description": "This interactive web portfolio is built with Next.js, React Three Fiber, and Framer Motion, showcasing dynamic 3D scenes and smooth transitions. It highlights my ability to craft immersive user experiences using WebGL-powered components, real-time animations, and spatial storytelling — all optimized for performance and responsiveness.",
+        "description1": "The 3D portfolio demonstrates advanced knowledge in immersive environments and animation. Smooth transitions and carefully orchestrated motion highlight strong command of modern frameworks. The result is an engaging, visually striking experience that blends technical precision with creative design. Its multilingual implementation further underlines attention to accessibility and inclusivity, ensuring the work resonates across diverse audiences.",
+        "description2": "This interactive web portfolio is built with Next.js, React Three Fiber, and Framer Motion, showcasing dynamic 3D scenes and smooth transitions. It highlights my ability to craft immersive user experiences using WebGL-powered components, real-time animations, and spatial storytelling — all optimized for performance and responsiveness.",
         "tags": {
           "tag1": "Nextjs",
           "tag2": "Threejs",
@@ -150,5 +175,30 @@
     "nameInvalid": "What kind of name is that?!",
     "emailInvalid": "What kind of email is that?!",
     "messageInvalid": "What a message! less than 10 characters!"
+  },
+  "footer": {
+    "privacyTitle": "Privacy Policy",
+    "privacySubTitle": "This site only collects personal data you submit via the contact form.",
+    "privacyLastUpdatedLabel": "Last updated",
+    "privacyLastUpdated": "14 Oct 2025",
+    "privacyPoint1": "Data collected: name, email address, and message content.",
+    "privacyPoint2": "Use: solely to respond to your inquiry.",
+    "privacyPoint3": "Sharing: not sold; shared only as required by law or for technical operation (hosting, email).",
+    "privacyPoint4": "Retention: kept only as long as necessary to process your request.",
+    "privacyPoint5": "Your rights: request access, correction, or deletion at any time.",
+    "privacyPoint6": "Legal basis: processing is based on Art. 6(1)(b) GDPR (responding to your request) or Art. 6(1)(f) GDPR (legitimate interest).",
+    "privacyPoint7": "Controller: [Your Full Name], reachable via the contact form or email.",
+    "privacyPoint8": "Supervisory authority: you have the right to lodge a complaint with a data protection authority in the EU.",
+    "privacyPoint9": "International transfers: if service providers outside the EU are used (e.g. hosting, email), appropriate safeguards are applied.",
+    "privacyPoint10": "Cookies: this website does not use cookies or tracking technologies.",
+
+    "termsTitle": "Terms & Conditions",
+    "termsSubTitle": "Personal, non-commercial viewing is allowed; commercial use is prohibited without permission.",
+    "termsLastUpdatedLabel": "Last updated",
+    "termsLastUpdated": "14 Oct 2025",
+    "termsPoint1": "Ownership: all content (text, images, designs, code samples) is mine unless stated otherwise.",
+    "termsPoint2": "Permitted use: personal, non-commercial reference and viewing only.",
+    "termsPoint3": "Prohibited: commercial use, reproduction, or redistribution without prior written consent.",
+    "termsPoint4": "Disclaimer: the site is provided 'as is' without warranties of any kind."
   }
 }

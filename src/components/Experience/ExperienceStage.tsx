@@ -1,57 +1,46 @@
 import { memo } from "react";
-import { VerticalTimelineElement } from "react-vertical-timeline-component";
-import Image from "../Image/Image";
 import type { IExperience } from "@/types";
 
 interface IExperienceStageProps {
   experience: IExperience;
+  onClick?: () => void;
+  onPointerOut?: () => void;
+  onPointerOver?: () => void;
 }
 
-const ExperienceStage = ({ experience }: IExperienceStageProps) => {
+const ExperienceStage = ({ experience, onClick, onPointerOut, onPointerOver }: IExperienceStageProps) => {
   return (
-    <VerticalTimelineElement
-      visible
-      className="vertical-timeline-element--work"
-      contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <Image
-            contain
-            src={experience.icon}
-            alt={experience.companyName}
-            tailWindWidth={"w-[60%]"}
-            tailWindHeight={"h-[60%]"}
-          />
-        </div>
-      }
+    <div
+      onClick={() => onClick && onClick()}
+      onPointerOver={() => onPointerOver && onPointerOver()}
+      onPointerOut={() => onPointerOut && onPointerOut()}
+      className="work-content_container group"
     >
-      <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.companyName}
-        </p>
+      <div className="flex flex-col h-full justify-start items-center py-2">
+        <div className="work-content_logo">
+          <img className="w-full h-full" src={experience.icon} alt="" />
+        </div>
+
+        <div className="work-content_bar" />
       </div>
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-    </VerticalTimelineElement>
+      <div className="sm:p-5 px-2.5 py-5">
+        <p className="font-bold text-white-800">{experience.companyName}</p>
+        <p className="text-sm mb-5">
+          {experience.title} -- <span>{experience.date}</span>
+        </p>
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+          {experience.points.map((point, index) => (
+            <li
+              key={`experience-point-${index}`}
+              className="group-hover:text-white transition-all ease-in-out duration-500"
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 

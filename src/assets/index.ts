@@ -20,7 +20,7 @@ const css = "/imgs/tech/css.webp";
 const git = "/imgs/tech/git.webp";
 const html = "/imgs/tech/html.webp";
 const javascript = "/imgs/tech/javascript.webp";
-const reactjs = "/imgs/tech/reactjs.webp";
+const nextjs = "/imgs/tech/nextjs.webp";
 const redux = "/imgs/tech/redux.webp";
 const tailwind = "/imgs/tech/tailwind.webp";
 const typescript = "/imgs/tech/typescript.webp";
@@ -34,6 +34,12 @@ const projectPortfolio = "/imgs/projectPortfolio.webp";
 const person = "/imgs/person.webp";
 const germany = "/imgs/germany.webp";
 const us = "/imgs/us.webp";
+const grid1 = "/imgs/grid1.webp";
+const grid2 = "/imgs/grid2.webp";
+const grid3 = "/imgs/grid3.webp";
+const tick = "/icons/tick.svg";
+const copy = "/icons/copy.svg";
+const vr = "/imgs/vr.webp";
 
 const geistSansLoader = localFont({
   src: "fonts/GeistVF.woff",
@@ -66,7 +72,7 @@ export {
   webxr,
   realitykit,
   openxr,
-  reactjs,
+  nextjs,
   redux,
   tailwind,
   typescript,
@@ -83,4 +89,10 @@ export {
   person,
   germany,
   us,
+  grid1,
+  grid2,
+  grid3,
+  tick,
+  copy,
+  vr,
 };

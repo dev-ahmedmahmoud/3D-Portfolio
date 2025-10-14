@@ -17,10 +17,12 @@ type ContentSection =
   | "navbar"
   | "hero"
   | "about"
+  | "bentoAbout"
   | "experience"
   | "projects"
   | "testimonials"
-  | "contact";
+  | "contact"
+  | "footer";
 
 export interface INavbarItem {
   name: string;
@@ -49,6 +51,15 @@ export interface IAboutContent extends IContent {
   }[];
 }
 
+interface BentoAboutTileTexttualContent {
+  headText?: string;
+  subText: string;
+}
+
+export interface IBentoAboutContent {
+  tiles: BentoAboutTileTexttualContent[];
+}
+
 export interface IExperienceContent extends IContent {
   experiences: IExperience[];
 }
@@ -74,15 +85,44 @@ export interface IContactContent extends IContent {
   messageInvalid: string;
 }
 
+export interface IFooterContent {
+  privacyTitle: string;
+  privacySubTitle: string;
+  privacyLastUpdatedLabel: string;
+  privacyLastUpdated: string;
+  privacyPoint1: string;
+  privacyPoint2: string;
+  privacyPoint3: string;
+  privacyPoint4: string;
+  privacyPoint5: string;
+  privacyPoint6: string;
+  privacyPoint7: string;
+  privacyPoint8: string;
+  privacyPoint9: string;
+  privacyPoint10: string;
+  termsTitle: string;
+  termsSubTitle: string;
+  termsLastUpdatedLabel: string;
+  termsLastUpdated: string;
+  termsPoint1: string;
+  termsPoint2: string;
+  termsPoint3: string;
+  termsPoint4: string;
+
+  allRightsReserved: string;
+}
+
 interface ContentReturnType {
   ():
     | IAboutContent
+    | IBentoAboutContent
     | INavbarContent
     | IHeroContent
     | IExperienceContent
     | IProjectsContent
     | ITestimonialsContent
-    | IContactContent;
+    | IContactContent
+    | IFooterContent;
 }
 
 export const useContent = (section: ContentSection): ContentReturnType => {
@@ -129,6 +169,32 @@ export const useContent = (section: ContentSection): ContentReturnType => {
         {
           title: t("services.reactNative"),
           icon: mobile,
+        },
+      ],
+    };
+  };
+
+  const getBentoAboutContent = (): IBentoAboutContent => {
+    return {
+      tiles: [
+        {
+          headText: t("tiles.tile1.headText"),
+          subText: t("tiles.tile1.subText"),
+        },
+        {
+          headText: t("tiles.tile2.headText"),
+          subText: t("tiles.tile2.subText"),
+        },
+        {
+          headText: t("tiles.tile3.headText"),
+          subText: t("tiles.tile3.subText"),
+        },
+        {
+          headText: t("tiles.tile4.headText"),
+          subText: t("tiles.tile4.subText"),
+        },
+        {
+          subText: t("tiles.tile5.subText"),
         },
       ],
     };
@@ -201,7 +267,8 @@ export const useContent = (section: ContentSection): ContentReturnType => {
       projects: [
         {
           name: t("projects.3dPortfolio.name"),
-          description: t("projects.3dPortfolio.description"),
+          description1: t("projects.3dPortfolio.description1"),
+          description2: t("projects.3dPortfolio.description2"),
           tags: [
             {
               name: t("projects.3dPortfolio.tags.tag1"),
@@ -274,14 +341,44 @@ export const useContent = (section: ContentSection): ContentReturnType => {
     };
   };
 
+  const getFooterContent = (): IFooterContent => {
+    return {
+      privacyTitle: t("privacyTitle"),
+      privacySubTitle: t("privacySubTitle"),
+      privacyLastUpdatedLabel: t("privacyLastUpdatedLabel"),
+      privacyLastUpdated: t("privacyLastUpdated"),
+      privacyPoint1: t("privacyPoint1"),
+      privacyPoint2: t("privacyPoint2"),
+      privacyPoint3: t("privacyPoint3"),
+      privacyPoint4: t("privacyPoint4"),
+      privacyPoint5: t("privacyPoint5"),
+      privacyPoint6: t("privacyPoint6"),
+      privacyPoint7: t("privacyPoint7"),
+      privacyPoint8: t("privacyPoint8"),
+      privacyPoint9: t("privacyPoint9"),
+      privacyPoint10: t("privacyPoint10"),
+      termsTitle: t("termsTitle"),
+      termsSubTitle: t("termsSubTitle"),
+      termsLastUpdatedLabel: t("termsLastUpdatedLabel"),
+      termsLastUpdated: t("termsLastUpdated"),
+      termsPoint1: t("termsPoint1"),
+      termsPoint2: t("termsPoint2"),
+      termsPoint3: t("termsPoint3"),
+      termsPoint4: t("termsPoint4"),
+      allRightsReserved: t("allRightsReserved"),
+    };
+  };
+
   const getContent = ():
     | IAboutContent
+    | IBentoAboutContent
     | INavbarContent
     | IHeroContent
     | IExperienceContent
     | ITestimonialsContent
     | IProjectsContent
-    | IContactContent => {
+    | IContactContent
+    | IFooterContent => {
     switch (section) {
       case "navbar":
         return getNavbarContent();
@@ -289,6 +386,8 @@ export const useContent = (section: ContentSection): ContentReturnType => {
         return getHeroContent();
       case "about":
         return getAboutContent();
+      case "bentoAbout":
+        return getBentoAboutContent();
       case "experience":
         return getExperienceContent();
       case "projects":
@@ -297,6 +396,8 @@ export const useContent = (section: ContentSection): ContentReturnType => {
         return getTestimonialsContent();
       case "contact":
         return getContactContent();
+      case "footer":
+        return getFooterContent();
     }
   };
 

@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { Navbar, Hero } from "@/containers";
 
-const About = dynamic(() => import("@/containers/About/About"), {
+const About = dynamic(() => import("@/containers/About/BentoAbout"), {
   ssr: false,
   loading: () => <p>Loading ...</p>,
 });
@@ -38,6 +38,10 @@ const Stars3D = dynamic(() => import("@/canvas/Stars/StarsCanvas"), {
   ssr: false,
   loading: () => <p>Loading ...</p>,
 });
+const Footer = dynamic(() => import("@/containers/Footer/Footer"), {
+  ssr: false,
+  loading: () => <p>Loading ...</p>,
+});
 
 export default function Home() {
   return (
@@ -55,6 +59,7 @@ export default function Home() {
         <Contact />
         <Stars3D />
       </div>
+      <Footer />
     </div>
   );
 }

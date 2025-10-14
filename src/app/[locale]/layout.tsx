@@ -11,7 +11,6 @@ import { Toaster } from "react-hot-toast";
 import StructuredData from "../structuredData";
 
 import "@/styles/globals.css";
-import "react-vertical-timeline-component/style.min.css";
 
 interface ILayoutProps {
   children: React.ReactNode;

@@ -48,6 +48,30 @@
       "reactNative": "React Native Apps"
     }
   },
+  "bentoAbout": {
+    "tiles": {
+      "tile1": {
+        "headText": "Hallöchen!",
+        "subText": "Grüß dich! Ich bin der Ahmed, Frontend‑Entwickler mit 8 Jahren Erfahrung im Gestalten und Bauen von eindrucksvollen 2D‑ und 3D‑Oberflächen."
+      },
+      "tile2": {
+        "headText": "Mein Tech‑Stack",
+        "subText": "Mit dieser soliden Grundlage war der Sprung in die XR‑Welt ganz locker. So konnt ich fix umdenken und interaktive Anwendungen bauen."
+      },
+      "tile3": {
+        "headText": "Bin flexibel bei Zeitzonen & Standorten",
+        "subText": "I wohn in Rijeka, Kroatien, bin aber für Remote‑Arbeit weltweit offen."
+      },
+      "tile4": {
+        "headText": "Meine Leidenschaft fürs Coden",
+        "subText": "Mit ästhetischer Genauigkeit und modernen KI‑Werkzeugen bring ich Ideen ruckzuck zum Leben – auf ’ne Art, die sich natürlich, spannend und zukunftsfit anfühlt. Lass uns schauen, wie XR die Technik‑Welt verändern kann!"
+      },
+      "tile5": {
+        "subText": "Meld dich bei mir",
+        "copyButtonText": "a.samyabdelhay@gmail.com"
+      }
+    }
+  },
   "experience": {
     "headline": "Berufserfahrung",
     "subHeadline": "Was ich bisher getan habe",
@@ -103,7 +127,8 @@
     "projects": {
       "3dPortfolio": {
         "name": "Mehrsprachig 3D-Portfolio",
-        "description": "Dieses interaktive Web-Portfolio wurde mit Next.js, React Three Fiber und Framer Motion entwickelt und präsentiert dynamische 3D-Szenen sowie flüssige Übergänge. Es demonstriert meine Fähigkeit, immersive Nutzererlebnisse mit WebGL-basierten Komponenten, Echtzeit-Animationen und räumlichem Storytelling zu gestalten — optimiert für Performance und Responsivität.",
+        "description1": "Das 3D‑Portfolio zeigt eindrucksvoll den sicheren Umgang mit 3D‑Technologien und Animation. Fließende Übergänge und präzise Bewegungen verdeutlichen die Beherrschung moderner Frameworks. So entsteht ein Erlebnis, das Technik und Gestaltung überzeugend verbindet. Die mehrsprachige Umsetzung hebt zusätzlich den Anspruch an Zugänglichkeit und Nutzerfreundlichkeit hervor und macht das Portfolio für ein breites Publikum relevant.",
+        "description2": "Dieses interaktive Web-Portfolio wurde mit Next.js, React Three Fiber und Framer Motion entwickelt und präsentiert dynamische 3D-Szenen sowie flüssige Übergänge. Es demonstriert meine Fähigkeit, immersive Nutzererlebnisse mit WebGL-basierten Komponenten, Echtzeit-Animationen und räumlichem Storytelling zu gestalten — optimiert für Performance und Responsivität.",
         "tags": {
           "tag1": "Nextjs",
           "tag2": "Threejs",
@@ -150,5 +175,28 @@
     "nameInvalid": "Was ist das denn für ein Name?!",
     "emailInvalid": "Was ist das denn für eine E-Mail?!",
     "messageInvalid": "Was für eine Nachricht! Weniger als 10 Zeichen!"
+  },
+  "footer": {
+    "privacyTitle": "Datenschutzerklärung",
+    "privacySubTitle": "Diese Website verarbeitet nur personenbezogene Daten, die Sie über das Kontaktformular übermitteln.",
+    "privacyLastUpdatedLabel": "Stand",
+    "privacyPoint1": "Erhobene Daten: Name, E-Mail-Adresse und Nachrichteninhalt.",
+    "privacyPoint2": "Verwendung: ausschließlich zur Beantwortung Ihrer Anfrage.",
+    "privacyPoint3": "Weitergabe: keine Veräußerung; nur gesetzlich erforderlich oder technisch notwendig (Hosting, E-Mail).",
+    "privacyPoint4": "Speicherdauer: nur so lange, wie für die Bearbeitung erforderlich.",
+    "privacyPoint5": "Ihre Rechte: Auskunft, Berichtigung oder Löschung jederzeit möglich.",
+    "privacyPoint6": "Rechtsgrundlage: Verarbeitung erfolgt nach Art. 6 Abs. 1 lit. b DSGVO (Beantwortung Ihrer Anfrage) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).",
+    "privacyPoint7": "Verantwortlicher: [Ihr vollständiger Name], erreichbar über das Kontaktformular oder per E-Mail.",
+    "privacyPoint8": "Aufsichtsbehörde: Sie haben das Recht, eine Beschwerde bei einer Datenschutzbehörde in der EU einzureichen.",
+    "privacyPoint9": "Internationale Übermittlungen: Falls Dienstleister außerhalb der EU eingesetzt werden (z. B. Hosting, E-Mail), werden geeignete Schutzmaßnahmen angewandt.",
+    "privacyPoint10": "Cookies: Diese Website verwendet keine Cookies oder Tracking-Technologien.",
+
+    "termsTitle": "Allgemeine Nutzungsbedingungen",
+    "termsSubTitle": "Private, nicht-kommerzielle Nutzung ist erlaubt; kommerzielle Nutzung ohne Zustimmung ist untersagt.",
+    "termsLastUpdatedLabel": "Stand",
+    "termsPoint1": "Urheberschaft: alle Inhalte (Texte, Bilder, Designs, Code-Beispiele) sind – sofern nicht anders angegeben – mein Eigentum.",
+    "termsPoint2": "Zulässige Nutzung: ausschließlich private, nicht-kommerzielle Ansicht und Referenz.",
+    "termsPoint3": "Untersagt: kommerzielle Nutzung, Vervielfältigung oder Weitergabe ohne vorherige schriftliche Zustimmung.",
+    "termsPoint4": "Haftungsausschluss: die Website wird „wie gesehen“ ohne Gewähr bereitgestellt."
   }
 }
