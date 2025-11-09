@@ -1,6 +1,5 @@
 import { useEffect, useRef, memo } from "react";
 import { useFormState } from "react-dom";
-import dynamic from "next/dynamic";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/hocs";
@@ -9,11 +8,7 @@ import { ISendEmailResult, sendEmail } from "@/app/actions/sendEmail";
 import { useContent } from "@/hooks";
 import type { IContactContent } from "@/hooks";
 import { FormSubmitButton } from "@/components";
-
-const Earth3D = dynamic(() => import("@/canvas/Earth/EarthCanvas"), {
-  ssr: false,
-  loading: () => <p>Loading ...</p>,
-});
+import { Earth3D } from "@/canvas";
 
 const Contact = memo(() => {
   const formRef = useRef<HTMLFormElement>(null);

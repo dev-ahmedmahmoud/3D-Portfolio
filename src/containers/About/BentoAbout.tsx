@@ -177,7 +177,7 @@ const About = () => {
                       tailWindWidth={"w-16"}
                       tailWindHeight={"h-16"}
                     />
-                    <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
+                    <p className="lg:text-lg md:text-xl font-medium text-gray_gradient text-white">
                       a.samyabdelhay@gmail.com
                     </p>
                   </button>
