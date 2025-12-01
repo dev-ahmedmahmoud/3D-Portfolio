@@ -8,18 +8,10 @@ export interface IExperience {
   points: string[];
 }
 
-interface ITag {
-  name: string;
-  color?: string;
-}
-
 export interface IProject {
   name: string;
   description1: string;
   description2: string;
-  tags: ITag[];
-  image: string;
-  source_code_link: string;
 }
 
 export interface ITestimonial {

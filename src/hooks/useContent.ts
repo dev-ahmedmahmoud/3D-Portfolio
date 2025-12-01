@@ -4,7 +4,6 @@ import {
   creator,
   mobile,
   person,
-  projectPortfolio,
   syncology,
   unitedprint,
   upwork,
@@ -269,27 +268,27 @@ export const useContent = (section: ContentSection): ContentReturnType => {
           name: t("projects.3dPortfolio.name"),
           description1: t("projects.3dPortfolio.description1"),
           description2: t("projects.3dPortfolio.description2"),
-          tags: [
-            {
-              name: t("projects.3dPortfolio.tags.tag1"),
-              color: "blue-text-gradient",
-            },
-            {
-              name: t("projects.3dPortfolio.tags.tag2"),
-              color: "green-text-gradient",
-            },
-            {
-              name: t("projects.3dPortfolio.tags.tag3"),
-              color: "pink-text-gradient",
-            },
-            {
-              name: t("projects.3dPortfolio.tags.tag4"),
-              color: "orange-text-gradient",
-            },
-          ],
-          image: projectPortfolio,
-          source_code_link: "https://github.com/",
         },
+        {
+          name: t("projects.iphone15replica.name"),
+          description1: t("projects.iphone15replica.description1"),
+          description2: t("projects.iphone15replica.description2"),
+        },
+        {
+          name: t("projects.3DProductModeling.name"),
+          description1: t("projects.3DProductModeling.description1"),
+          description2: t("projects.3DProductModeling.description2"),
+        },
+        {
+          name: t("projects.showroom.name"),
+          description1: t("projects.showroom.description1"),
+          description2: t("projects.showroom.description2"),
+        },
+        {
+          name: t("projects.helloXR.name"),
+          description1: t("projects.helloXR.description1"),
+          description2: t("projects.helloXR.description2"),
+        }
       ],
     };
   };

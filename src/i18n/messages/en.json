@@ -27,9 +27,9 @@
   },
   "navbar": {
     "mastery": "XR Mastery",
-    "about": "About me",
-    "projects": "Projects",
-    "contact": "Contact"
+    "about#about": "About me",
+    "projects#projects": "Projects",
+    "contact#contact": "Contact"
   },
   "hero": {
     "headlinePart1": "Hello I am",
@@ -60,7 +60,7 @@
       },
       "tile3": {
         "headText": "I am very flexible with time zone communications & locations",
-        "subText": "I am based in Rijeka, Croatia and open to remote work worldwide."
+        "subText": "I am based in Dresden, Germany and open to remote work worldwide."
       },
       "tile4": {
         "headText": "My Passion for Coding",
@@ -128,13 +128,27 @@
       "3dPortfolio": {
         "name": "Multilingual 3D-Portfolio",
         "description1": "The 3D portfolio demonstrates advanced knowledge in immersive environments and animation. Smooth transitions and carefully orchestrated motion highlight strong command of modern frameworks. The result is an engaging, visually striking experience that blends technical precision with creative design. Its multilingual implementation further underlines attention to accessibility and inclusivity, ensuring the work resonates across diverse audiences.",
-        "description2": "This interactive web portfolio is built with Next.js, React Three Fiber, and Framer Motion, showcasing dynamic 3D scenes and smooth transitions. It highlights my ability to craft immersive user experiences using WebGL-powered components, real-time animations, and spatial storytelling — all optimized for performance and responsiveness.",
-        "tags": {
-          "tag1": "Nextjs",
-          "tag2": "Threejs",
-          "tag3": "framer-motion",
-          "tag4": "Tailwind"
-        }
+        "description2": "This interactive web portfolio is built with Next.js, React Three Fiber, and Framer Motion, showcasing dynamic 3D scenes and smooth transitions. It highlights my ability to craft immersive user experiences using WebGL-powered components, real-time animations, and spatial storytelling — all optimized for performance and responsiveness."
+      },
+      "iphone15replica": {
+        "name": "iPhone 15 Replica",
+        "description1": "A pixel-perfect recreation of the iPhone 15 website, meticulously crafted to showcase fluid animations and a responsive design. This project highlights a deep understanding of modern web development, blending stunning visuals with a seamless user experience, powered by cutting-edge technologies.",
+        "description2": "Built with Next.js for optimal performance and SEO, styled with Tailwind CSS for rapid and consistent UI development, and enhanced with TypeScript for robust code quality. Dynamic and engaging animations are brought to life using GSAP, delivering an interactive and visually rich browsing experience that mirrors Apple's iconic design."
+      },
+      "3DProductModeling": {
+        "name": "AI Powered 3D Product Modeling",
+        "description1": "A versatile 3D product modeling platform designed for e-commerce, enabling businesses to showcase their products with interactive, high-fidelity 3D models. This project integrates cutting-edge web technologies to deliver a seamless user experience, allowing for dynamic product visualization and customization. It also explores the innovative use of Large Language Models (LLMs) to generate unique textual logos or textures directly onto 3D models, offering unparalleled personalization.",
+        "description2": "Built on Next.js for optimal performance and SEO, styled with Tailwind CSS for a sleek, responsive interface. The core 3D rendering is powered by Three.js, while GSAP orchestrates fluid, engaging animations. This combination creates an immersive viewing experience, further enhanced by the experimental LLM integration that allows for on-the-fly generation of custom text-based designs, pushing the boundaries of interactive product presentation."
+      },
+      "showroom": {
+        "name": "VR Showroom",
+        "description1": "Step into an immersive 3D Gaming Room, a virtual showroom meticulously crafted to demonstrate cutting-edge XR skills within a web context. This experience leverages the power of WebXR to transport users into a captivating VR world, showcasing interactive environments and advanced spatial design.",
+        "description2": "Built on Next.js for optimal performance and SEO, this VR showroom utilizes Three.js to render stunning 3D graphics and intricate environments. It highlights my expertise in creating seamless, high-fidelity virtual reality experiences directly in the browser, pushing the boundaries of web-based XR applications."
+      },
+      "helloXR": {
+        "name": "Hello XR",
+        "description1": "Dive into 'Hello XR,' a captivating WebXR application designed to showcase intuitive hand-tracking interactions within immersive virtual and augmented realities. This project allows users to sculpt and manipulate dynamic particle systems with their own hands, demonstrating a seamless blend of physical gesture and digital response.",
+        "description2": "Crafted with WebXR, this experience pushes the boundaries of interactive design, offering a tangible demonstration of my expertise in creating responsive, hand-controlled environments. It highlights the potential of natural user interfaces in VR/AR, transforming abstract concepts into engaging, haptic-like interactions."
       }
     }
   },
@@ -191,7 +205,6 @@
     "privacyPoint8": "Supervisory authority: you have the right to lodge a complaint with a data protection authority in the EU.",
     "privacyPoint9": "International transfers: if service providers outside the EU are used (e.g. hosting, email), appropriate safeguards are applied.",
     "privacyPoint10": "Cookies: this website does not use cookies or tracking technologies.",
-
     "termsTitle": "Terms & Conditions",
     "termsSubTitle": "Personal, non-commercial viewing is allowed; commercial use is prohibited without permission.",
     "termsLastUpdatedLabel": "Last updated",
@@ -199,6 +212,7 @@
     "termsPoint1": "Ownership: all content (text, images, designs, code samples) is mine unless stated otherwise.",
     "termsPoint2": "Permitted use: personal, non-commercial reference and viewing only.",
     "termsPoint3": "Prohibited: commercial use, reproduction, or redistribution without prior written consent.",
-    "termsPoint4": "Disclaimer: the site is provided 'as is' without warranties of any kind."
+    "termsPoint4": "Disclaimer: the site is provided 'as is' without warranties of any kind.",
+    "allRightsReserved": "All rights reserved"
   }
 }

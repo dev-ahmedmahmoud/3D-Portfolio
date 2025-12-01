@@ -27,9 +27,9 @@
   },
   "navbar": {
     "mastery": "XR Beherrschung",
-    "about": "Über mich",
-    "projects": "Projekte",
-    "contact": "Kontakt"
+    "about#ubermich": "Über mich",
+    "projects#projekte": "Projekte",
+    "contact#kontakt": "Kontakt"
   },
   "hero": {
     "headlinePart1": "Hallo Ich bin",
@@ -60,7 +60,7 @@
       },
       "tile3": {
         "headText": "Bin flexibel bei Zeitzonen & Standorten",
-        "subText": "I wohn in Rijeka, Kroatien, bin aber für Remote‑Arbeit weltweit offen."
+        "subText": "I wohn in Dresden, Deutschland, bin aber für Remote‑Arbeit weltweit offen."
       },
       "tile4": {
         "headText": "Meine Leidenschaft fürs Coden",
@@ -128,13 +128,27 @@
       "3dPortfolio": {
         "name": "Mehrsprachig 3D-Portfolio",
         "description1": "Das 3D‑Portfolio zeigt eindrucksvoll den sicheren Umgang mit 3D‑Technologien und Animation. Fließende Übergänge und präzise Bewegungen verdeutlichen die Beherrschung moderner Frameworks. So entsteht ein Erlebnis, das Technik und Gestaltung überzeugend verbindet. Die mehrsprachige Umsetzung hebt zusätzlich den Anspruch an Zugänglichkeit und Nutzerfreundlichkeit hervor und macht das Portfolio für ein breites Publikum relevant.",
-        "description2": "Dieses interaktive Web-Portfolio wurde mit Next.js, React Three Fiber und Framer Motion entwickelt und präsentiert dynamische 3D-Szenen sowie flüssige Übergänge. Es demonstriert meine Fähigkeit, immersive Nutzererlebnisse mit WebGL-basierten Komponenten, Echtzeit-Animationen und räumlichem Storytelling zu gestalten — optimiert für Performance und Responsivität.",
-        "tags": {
-          "tag1": "Nextjs",
-          "tag2": "Threejs",
-          "tag3": "framer-motion",
-          "tag4": "Tailwind"
-        }
+        "description2": "Dieses interaktive Web-Portfolio wurde mit Next.js, React Three Fiber und Framer Motion entwickelt und präsentiert dynamische 3D-Szenen sowie flüssige Übergänge. Es demonstriert meine Fähigkeit, immersive Nutzererlebnisse mit WebGL-basierten Komponenten, Echtzeit-Animationen und räumlichem Storytelling zu gestalten — optimiert für Performance und Responsivität."
+      },
+      "iphone15replica": {
+        "name": "iPhone 15 Nachbildung",
+        "description1": "Eine pixelgenaue Nachbildung der iPhone 15 Website, sorgfältig erstellt, um flüssige Animationen und ein responsives Design zu präsentieren. Dieses Projekt zeigt ein tiefes Verständnis moderner Webentwicklung, das atemberaubende Visuals mit einer nahtlosen Benutzererfahrung verbindet, angetrieben von modernsten Technologien.",
+        "description2": "Entwickelt mit Next.js für optimale Leistung und SEO, gestylt mit Tailwind CSS für schnelle und konsistente UI-Entwicklung und erweitert mit TypeScript für robuste Codequalität. Dynamische und ansprechende Animationen werden mit GSAP zum Leben erweckt und bieten ein interaktives und visuell reiches Surferlebnis, das Apples ikonisches Design widerspiegelt."
+      },
+      "3DProductModeling": {
+        "name": "KI-gestützte 3D-Produktmodellierung",
+        "description1": "Eine vielseitige 3D-Produktmodellierungsplattform für den E-Commerce, die Unternehmen ermöglicht, ihre Produkte mit interaktiven, hochauflösenden 3D-Modellen zu präsentieren. Dieses Projekt integriert modernste Webtechnologien, um eine nahtlose Benutzererfahrung zu bieten, die dynamische Produktvisualisierung und -anpassung ermöglicht. Es erforscht auch den innovativen Einsatz von Large Language Models (LLMs) zur Generierung einzigartiger Textlogos oder Texturen direkt auf 3D-Modellen, was eine unvergleichliche Personalisierung bietet.",
+        "description2": "Basierend auf Next.js für optimale Leistung und SEO, gestylt mit Tailwind CSS für eine schlanke, responsive Oberfläche. Das Kern-3D-Rendering wird von Three.js angetrieben, während GSAP flüssige, ansprechende Animationen orchestriert. Diese Kombination schafft ein immersives Seherlebnis, das durch die experimentelle LLM-Integration, die die spontane Generierung benutzerdefinierter textbasierter Designs ermöglicht, weiter verbessert wird und die Grenzen der interaktiven Produktpräsentation verschiebt."
+      },
+      "showroom": {
+        "name": "VR Showroom",
+        "description1": "Treten Sie ein in einen immersiven 3D-Gaming-Raum, einen virtuellen Showroom, der sorgfältig erstellt wurde, um modernste XR-Fähigkeiten im Webkontext zu demonstrieren. Dieses Erlebnis nutzt die Kraft von WebXR, um Benutzer in eine fesselnde VR-Welt zu versetzen und interaktive Umgebungen sowie fortschrittliches räumliches Design zu präsentieren.",
+        "description2": "Dieser VR-Showroom, der mit Next.js für optimale Leistung und SEO erstellt wurde, verwendet Three.js, um atemberaubende 3D-Grafiken und komplexe Umgebungen zu rendern. Er unterstreicht meine Expertise bei der Erstellung nahtloser, hochauflösender Virtual-Reality-Erlebnisse direkt im Browser und verschiebt die Grenzen webbasierter XR-Anwendungen."
+      },
+      "helloXR": {
+        "name": "Hello XR",
+        "description1": "Tauchen Sie ein in 'Hello XR', eine fesselnde WebXR-Anwendung, die intuitive Hand-Tracking-Interaktionen in immersiven virtuellen und erweiterten Realitäten demonstriert. Dieses Projekt ermöglicht es Benutzern, dynamische Partikelsysteme mit ihren eigenen Händen zu formen und zu manipulieren, was eine nahtlose Mischung aus physischer Geste und digitaler Reaktion zeigt.",
+        "description2": "Entwickelt mit WebXR, verschiebt dieses Erlebnis die Grenzen des interaktiven Designs und bietet eine greifbare Demonstration meiner Expertise bei der Erstellung reaktionsschneller, handgesteuerter Umgebungen. Es unterstreicht das Potenzial natürlicher Benutzeroberflächen in VR/AR und verwandelt abstrakte Konzepte in ansprechende, haptikähnliche Interaktionen."
       }
     }
   },
@@ -180,6 +194,7 @@
     "privacyTitle": "Datenschutzerklärung",
     "privacySubTitle": "Diese Website verarbeitet nur personenbezogene Daten, die Sie über das Kontaktformular übermitteln.",
     "privacyLastUpdatedLabel": "Stand",
+    "privacyLastUpdated": "14 Oct 2025",
     "privacyPoint1": "Erhobene Daten: Name, E-Mail-Adresse und Nachrichteninhalt.",
     "privacyPoint2": "Verwendung: ausschließlich zur Beantwortung Ihrer Anfrage.",
     "privacyPoint3": "Weitergabe: keine Veräußerung; nur gesetzlich erforderlich oder technisch notwendig (Hosting, E-Mail).",
@@ -190,13 +205,14 @@
     "privacyPoint8": "Aufsichtsbehörde: Sie haben das Recht, eine Beschwerde bei einer Datenschutzbehörde in der EU einzureichen.",
     "privacyPoint9": "Internationale Übermittlungen: Falls Dienstleister außerhalb der EU eingesetzt werden (z. B. Hosting, E-Mail), werden geeignete Schutzmaßnahmen angewandt.",
     "privacyPoint10": "Cookies: Diese Website verwendet keine Cookies oder Tracking-Technologien.",
-
     "termsTitle": "Allgemeine Nutzungsbedingungen",
     "termsSubTitle": "Private, nicht-kommerzielle Nutzung ist erlaubt; kommerzielle Nutzung ohne Zustimmung ist untersagt.",
     "termsLastUpdatedLabel": "Stand",
+    "termsLastUpdated": "14 Oct 2025",
     "termsPoint1": "Urheberschaft: alle Inhalte (Texte, Bilder, Designs, Code-Beispiele) sind – sofern nicht anders angegeben – mein Eigentum.",
     "termsPoint2": "Zulässige Nutzung: ausschließlich private, nicht-kommerzielle Ansicht und Referenz.",
     "termsPoint3": "Untersagt: kommerzielle Nutzung, Vervielfältigung oder Weitergabe ohne vorherige schriftliche Zustimmung.",
-    "termsPoint4": "Haftungsausschluss: die Website wird „wie gesehen“ ohne Gewähr bereitgestellt."
+    "termsPoint4": "Haftungsausschluss: die Website wird „wie gesehen“ ohne Gewähr bereitgestellt.",
+    "allRightsReserved": "Alle Rechte vorbehalten"
   }
 }

@@ -3,31 +3,52 @@ import { useMotionValue, animate, motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import { OldComputer3D as DemoComputer } from "@/canvas";
-import { AnimatedSectionHead, Loader } from "@/components";
+import { AnimatedSectionHead, Image, Loader } from "@/components";
 import { SectionWrapper } from "@/hocs";
 import { IProjectsContent, useContent } from "@/hooks";
 
 export const myProjects = [
   {
-    href: "https://ahmedmahmoud.de",
+    href: "https://portfolio.ahmedmahmoud.de",
     texture: "/textures/project/project1.mp4",
-    logo: "/assets/project-logo1.png",
-    logoStyle: {
-      backgroundColor: "#2A1816",
-      border: "0.2px solid #36201D",
-      boxShadow: "0px 0px 60px 0px #AA3C304D",
-    },
     spotlight: "/assets/spotlight1.png",
     tags: [
       {
         id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Threejs",
+        path: "/imgs/tech/threejs.png",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/tailwindcss.png",
+      },
+      {
+        id: 4,
+        name: "Framer Motion",
+        path: "/assets/framer.png",
+      },
+    ],
+  },
+  {
+    href: "https://iphone15replica.ahmedmahmoud.de",
+    texture: "/textures/project/project2.mp4",
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
       },
       {
         id: 2,
         name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        path: "/assets/tailwindcss.png",
       },
       {
         id: 3,
@@ -36,8 +57,94 @@ export const myProjects = [
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "GSAP",
+        path: "/imgs/tech/gsap.png",
+      },
+    ],
+  },
+  {
+    href: "https://productmodeling.ahmedmahmoud.de",
+    texture: "/textures/project/project3.mp4",
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Threejs",
+        path: "/imgs/tech/threejs.png",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/tailwindcss.png",
+      },
+      {
+        id: 4,
+        name: "GSAP",
+        path: "/imgs/tech/gsap.png",
+      },
+    ],
+  },
+  {
+    href: "https://ahmedmahmoud.de",
+    texture: "/textures/project/project4.mp4",
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Threejs",
+        path: "/imgs/tech/threejs.png",
+      },
+      {
+        id: 3,
+        name: "WebXR",
+        path: "/imgs/tech/webxr.webp",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "/assets/tailwindcss.png",
+      },
+      {
+        id: 5,
+        name: "GSAP",
+        path: "/imgs/tech/gsap.png",
+      },
+    ],
+  },
+  {
+    href: "https://helloxr.ahmedmahmoud.de",
+    texture: "/textures/project/project5.mp4",
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Threejs",
+        path: "/imgs/tech/threejs.png",
+      },
+      {
+        id: 3,
+        name: "WebXR",
+        path: "/imgs/tech/webxr.webp",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "/assets/tailwindcss.png",
       },
     ],
   },
@@ -81,23 +188,12 @@ const Projects = () => {
         introduction={projectsContent.introduction}
       />
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+        <div className="flex flex-col justify-between gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
           <div className="absolute top-0 right-0">
             <img
               src={currentProject.spotlight}
               alt="spotlight"
               className="w-full h-96 object-cover rounded-xl"
-            />
-          </div>
-
-          <div
-            className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
-            style={currentProject.logoStyle}
-          >
-            <img
-              className="w-10 h-10 shadow-sm"
-              src={currentProject.logo}
-              alt="logo"
             />
           </div>
 
@@ -110,46 +206,72 @@ const Projects = () => {
             <p>{currentProjectTextualContent.description2}</p>
           </motion.div>
 
-          <div className="flex items-center justify-between flex-wrap gap-5">
-            <div className="flex items-center gap-3">
-              {currentProject.tags.map((tag, index) => (
-                <div key={index} className="tech-logo">
-                  <img src={tag.path} alt={tag.name} />
-                </div>
-              ))}
+          <div>
+            <div className="flex items-center justify-between flex-wrap gap-5">
+              <div className="flex items-center gap-3">
+                {currentProject.tags.map((tag, index) => (
+                  <div key={index} className="tech-logo">
+                    <Image
+                      src={tag.path}
+                      alt={tag.name}
+                      tailWindWidth="w-10"
+                      tailWindHeight="h-10"
+                      roundedFull={false}
+                      contain
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <a
+                className="flex items-center gap-2 cursor-pointer text-white-600"
+                href={currentProject.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>Check Live Site</p>
+                <Image
+                  src="/assets/arrow-up.png"
+                  alt="arrow"
+                  tailWindWidth="w-3"
+                  tailWindHeight="h-3"
+                  roundedFull={false}
+                  contain
+                />
+              </a>
             </div>
 
-            <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a>
-          </div>
+            <div className="flex justify-between items-center mt-7">
+              <button
+                className="arrow-btn"
+                onClick={() => handleNavigation("previous")}
+              >
+                <Image
+                  src="/assets/left-arrow.png"
+                  alt="left arrow"
+                  tailWindWidth="w-4"
+                  tailWindHeight="h-4"
+                  roundedFull={false}
+                  contain
+                />
+              </button>
 
-          <div className="flex justify-between items-center mt-7">
-            <button
-              className="arrow-btn"
-              onClick={() => handleNavigation("previous")}
-            >
-              <img src="/assets/left-arrow.png" alt="left arrow" />
-            </button>
-
-            <button
-              className="arrow-btn"
-              onClick={() => handleNavigation("next")}
-            >
-              <img
-                src="/assets/right-arrow.png"
-                alt="right arrow"
-                className="w-4 h-4"
-              />
-            </button>
+              <button
+                className="arrow-btn"
+                onClick={() => handleNavigation("next")}
+              >
+                <Image
+                  src="/assets/right-arrow.png"
+                  alt="right arrow"
+                  tailWindWidth="w-4"
+                  tailWindHeight="h-4"
+                  roundedFull={false}
+                  contain
+                />
+              </button>
+            </div>
           </div>
-        </div>
+        </div >
 
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
           <Canvas>
@@ -172,7 +294,7 @@ const Projects = () => {
             <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
           </Canvas>
         </div>
-      </div>
+      </div >
     </>
   );
 };
