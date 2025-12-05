@@ -1,4 +1,4 @@
-import { memo, useRef } from "react";
+import { memo, useRef, MutableRefObject } from "react";
 import { Canvas } from "@react-three/fiber";
 import { View, Preload } from "@react-three/drei";
 import dynamic from "next/dynamic";
@@ -79,7 +79,7 @@ const Tech = memo(() => {
 
       <Canvas
         className="canvas"
-        eventSource={containerRef as any}
+        eventSource={containerRef as MutableRefObject<HTMLElement>}
         style={{
           position: "fixed",
           top: 0,

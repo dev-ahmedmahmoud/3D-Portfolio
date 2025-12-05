@@ -1,4 +1,4 @@
-import { memo, Suspense, useCallback, useState, useEffect } from "react";
+import { memo, Suspense, useCallback, useState } from "react";
 import { useMotionValue, animate, motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls, useVideoTexture } from "@react-three/drei";

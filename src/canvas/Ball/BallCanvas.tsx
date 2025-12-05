@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import { OrbitControls, View, PerspectiveCamera } from "@react-three/drei";
-import { Loader } from "@/components";
 import Ball3DModel from "./Ball3DModel";
 
 interface IBallCanvasProps {
