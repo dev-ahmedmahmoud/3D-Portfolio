@@ -1,11 +1,16 @@
-import { memo, Suspense, useCallback, useState } from "react";
+import { memo, Suspense, useCallback, useState, useEffect } from "react";
 import { useMotionValue, animate, motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
-import { Center, OrbitControls } from "@react-three/drei";
+import { Center, OrbitControls, useVideoTexture } from "@react-three/drei";
 import { OldComputer3D as DemoComputer } from "@/canvas";
 import { AnimatedSectionHead, Image, Loader } from "@/components";
 import { SectionWrapper } from "@/hocs";
 import { IProjectsContent, useContent } from "@/hooks";
+
+const PreloadVideo = ({ texture }: { texture: string }) => {
+  useVideoTexture(texture);
+  return null;
+};
 
 export const myProjects = [
   {
@@ -288,6 +293,9 @@ const Projects = () => {
                     texture={currentProject.texture}
                     rotationY={rotationY}
                   />
+                  {myProjects.map((project) => (
+                    <PreloadVideo key={project.texture} texture={project.texture} />
+                  ))}
                 </group>
               </Suspense>
             </Center>
