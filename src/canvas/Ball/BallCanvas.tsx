@@ -1,6 +1,5 @@
 import { Suspense } from "react";
-import { OrbitControls, Preload } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import { OrbitControls, View, PerspectiveCamera } from "@react-three/drei";
 import { Loader } from "@/components";
 import Ball3DModel from "./Ball3DModel";
 
@@ -10,18 +9,15 @@ interface IBallCanvasProps {
 
 const BallCanvas = ({ imgUrl }: IBallCanvasProps) => {
   return (
-    <Canvas
-      frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<Loader />}>
-        <OrbitControls enableZoom={false} />
+    <View className="w-full h-full">
+      <Suspense fallback={null}>
+        <PerspectiveCamera makeDefault position={[0, 0, 6]} fov={75} />
+        <ambientLight intensity={0.25} />
+        <directionalLight position={[0, 0, 0.05]} />
         <Ball3DModel imgUrl={imgUrl} />
+        <OrbitControls enableZoom={false} />
       </Suspense>
-
-      <Preload all />
-    </Canvas>
+    </View>
   );
 };
 
