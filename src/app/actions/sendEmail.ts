@@ -4,11 +4,18 @@ import nodemailer from "nodemailer";
 import { google } from "googleapis";
 import { z } from "zod";
 
-const EMAIL_USER = "a.samyabdelhay@gmail.com";
+// Internal error codes for debugging (never exposed fully to users)
+const ERR = {
+  VALIDATION: "E100",
+  OAUTH: "E200",
+  SMTP: "E300",
+  UNKNOWN: "E999",
+};
 
 export interface ISendEmailResult {
   success: boolean | null;
-  error: string;
+  error: string; // user-friendly error message
+  code?: string; // internal error code for YOU
 }
 
 const schema = z.object({
@@ -17,64 +24,116 @@ const schema = z.object({
   message: z.string().min(10, "messageInvalid"),
 });
 
+/**
+ * Sends email using Gmail OAuth2.
+ * Isolated so errors NEVER crash your app.
+ */
 export async function sendEmail(
-  _prevState: ISendEmailResult,
+  _prev: ISendEmailResult,
   formData: FormData
 ): Promise<ISendEmailResult> {
-  const raw = Object.fromEntries(formData);
-  const parsed = schema.safeParse(raw);
+  try {
+    // ---------------------------------------
+    // 1. Validate input
+    // ---------------------------------------
+    const raw = Object.fromEntries(formData);
+    const parsed = schema.safeParse(raw);
 
-  if (!parsed.success) {
-    const tree = z.treeifyError(parsed.error);
+    if (!parsed.success) {
+      const tree = z.treeifyError(parsed.error);
 
-    for (const [field, detail] of Object.entries(tree.properties ?? {})) {
-      if (field && detail.errors.length > 0) {
-        return { success: false, error: detail.errors[0] };
+      for (const [field, detail] of Object.entries(tree.properties ?? {})) {
+        if (field && detail.errors.length > 0) {
+          return { success: false, error: detail.errors[0], code: ERR.VALIDATION };
+        }
       }
+
+      return { success: false, error: "" };
     }
 
-    return { success: false, error: "" };
-  }
-  const { name, email, message } = parsed.data;
+    const { name, email, message } = parsed.data;
 
-  const oAuth2Client = new google.auth.OAuth2(
-    process.env.CLIENT_ID,
-    process.env.CLIENT_SECRET,
-    "https://developers.google.com/oauthplayground" // redirect URI
-  );
+    // ---------------------------------------
+    // 2. Initialize OAuth2 client
+    // ---------------------------------------
+    const oAuth2Client = new google.auth.OAuth2(
+      process.env.CLIENT_ID,
+      process.env.CLIENT_SECRET,
+      process.env.REDIRECT_URI // your app route, not playground
+    );
 
-  oAuth2Client.setCredentials({
-    refresh_token: process.env.REFRESH_TOKEN,
-  });
+    oAuth2Client.setCredentials({
+      refresh_token: process.env.REFRESH_TOKEN,
+    });
 
-  const accessToken = await oAuth2Client.getAccessToken();
+    let accessToken: string | null = null;
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      type: "OAuth2",
-      user: EMAIL_USER,
-      clientId: process.env.CLIENT_ID,
-      clientSecret: process.env.CLIENT_SECRET,
-      refreshToken: process.env.REFRESH_TOKEN,
-      accessToken: accessToken?.token ?? "",
-    },
-  });
+    try {
+      const resp = await oAuth2Client.getAccessToken();
+      accessToken = resp?.token ?? null;
+    } catch (err) {
+      console.error("OAuth2 error:", err);
+      return {
+        success: false,
+        error: "Email service temporarily unavailable.",
+        code: ERR.OAUTH,
+      };
+    }
 
-  const mailOptions = {
-    from: `"${name}" <${email}>`,
-    to: EMAIL_USER!,
-    subject: "New message from your portfolio",
-    text: message,
-  };
+    if (!accessToken) {
+      return {
+        success: false,
+        error: "Email service error. Please try again later.",
+        code: ERR.OAUTH,
+      };
+    }
 
-  try {
-    await transporter.sendMail(mailOptions);
-    return { success: true, error: "" };
-  } catch (error) {
-    console.error("Email error:", error);
-    const message =
-      error instanceof Error ? error.message : "Failed to send email.";
-    return { success: false, error: message };
+    // ---------------------------------------
+    // 3. Create transporter
+    // ---------------------------------------
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        type: "OAuth2",
+        user: process.env.EMAIL_USER,
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+        refreshToken: process.env.REFRESH_TOKEN,
+        accessToken: accessToken,
+      },
+    });
+
+    // ---------------------------------------
+    // 4. Prepare mail
+    // ---------------------------------------
+    const mailOptions = {
+      from: `"${name}" <${email}>`,
+      to: process.env.EMAIL_USER,
+      subject: "New message from your portfolio",
+      text: message,
+    };
+
+    // ---------------------------------------
+    // 5. Send email with safety guard
+    // ---------------------------------------
+    try {
+      await transporter.sendMail(mailOptions);
+      return { success: true, error: "" };
+    } catch (err) {
+      console.error("SMTP error:", err);
+      return {
+        success: false,
+        error: "Unable to send email at the moment.",
+        code: ERR.SMTP,
+      };
+    }
+  } catch (err) {
+    // Safety fallback – app NEVER crashes.
+    console.error("Unexpected sendEmail error:", err);
+    return {
+      success: false,
+      error: "Unexpected error. Please try again.",
+      code: ERR.UNKNOWN,
+    };
   }
 }

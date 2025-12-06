@@ -31,7 +31,7 @@ const Contact = memo(() => {
     } else {
       const translatedError =
         contactContent[state.error as keyof IContactContent];
-      toast.error(translatedError || contactContent.contactFail);
+      toast.error(`${translatedError || contactContent.contactFail} ${state.code}`);
     }
   }, [state.success, state.error, contactContent, formRef.current]);
 
