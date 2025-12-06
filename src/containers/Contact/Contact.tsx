@@ -104,7 +104,7 @@ const Contact = memo(() => {
         {...slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] min-w-0"
       >
-        <Earth3D />
+        <Earth3D isContact />
       </motion.div>
     </div>
   );
