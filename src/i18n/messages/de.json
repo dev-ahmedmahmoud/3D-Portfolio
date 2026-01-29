@@ -67,8 +67,7 @@
         "subText": "Mit ästhetischer Genauigkeit und modernen KI‑Werkzeugen bring ich Ideen ruckzuck zum Leben – auf ’ne Art, die sich natürlich, spannend und zukunftsfit anfühlt. Lass uns schauen, wie XR die Technik‑Welt verändern kann!"
       },
       "tile5": {
-        "subText": "Meld dich bei mir",
-        "copyButtonText": "contact@ahmedmahmoud.de"
+        "subText": "Meld dich bei mir"
       }
     }
   },
@@ -77,7 +76,7 @@
     "subHeadline": "Was ich bisher getan habe",
     "experiences": {
       "reactAndReactNative": {
-        "title": "React.js / React Native Developer",
+        "title": "React.js/React Native-Entwickler",
         "companyName": "Freiberufler",
         "date": "Jan 2017 - Oct 2020",
         "points": {
@@ -88,7 +87,7 @@
         }
       },
       "cto": {
-        "title": "Chief Technolofy Officer",
+        "title": "Technischer Mitbegründer",
         "companyName": "Syncology eServices",
         "date": "Jan 2020 - Present",
         "points": {
@@ -97,7 +96,7 @@
         }
       },
       "nextjs": {
-        "title": "Nextjs Developer",
+        "title": "React.js/Next.js-Entwickler",
         "companyName": "unitedprint SE",
         "date": "Dec 2020 - Present",
         "points": {
@@ -157,20 +156,20 @@
     "testimonialsSubheadline": "Referenzen",
     "testimonials": {
       "testimonial1": {
-        "name": "Anne",
+        "name": "Michael",
         "designation": "Frontend-Teamleitung",
         "company": "unitedprint SE",
-        "body": "Ahmed verbindet technisches Know-how mit strategischem Weitblick. Seine Planung hielt unsere Sprints fokussiert und effizient, und sein Führungsstil auf Augenhöhe stärkte das Selbstvertrauen der Junior-Entwickler:innen. Die Zusammenarbeit mit ihm hat unser Team spürbar vorangebracht."
+        "body": "Ahmed war immer auf dem neuesten Stand der Technik und integrierte aktuelle Entwicklungen sinnvoll in das Projekt. Er war in der Lage, Fehlerbehebungen und neue Funktionen sauber zu integrieren, ohne unerwünschte Nebenwirkungen zu verursachen. Er arbeitete nicht nur Aufgaben ab, sondern trug proaktiv zur Modernisierung der Codebasis bei. Sein Mikro-Führungsstil ermöglichte es Junior-Entwicklern, selbstbewusst ihren Beitrag zu leisten, was ihn zu einer klaren technischen Bereicherung für jedes Entwicklungsteam machte."
       },
       "testimonial2": {
-        "name": "Cindy",
+        "name": "C.W",
         "designation": "Abteilungsleiterin",
         "company": "unitedprint SE",
-        "body": "Ahmed bringt Struktur in komplexe Projekte. Seine Zeitplanung ist präzise, und er versteht es, Kolleg:innen auf gemeinsame Ziele einzuschwören. Mit seiner ruhigen Art und seinem Blick fürs Detail ist er eine verlässliche Größe in jedem Tech-Projekt."
+        "body": "Ahmed strukturiert komplexe Entwicklungsprojekte effizient und zielgerichtet. Er ist ein Teamplayer, der Kolleginnen aktiv unterstützt und zu einer konstruktiven sowie lösungsorientierten Zusammenarbeit beiträgt. Neue Themen und Technologien erschließt er sich schnell und wendet dieses Wissen vorausschauend bei der Umsetzung von Projekten an. Durch seine analytische Arbeitsweise und sein Detailverständnis ist er eine verlässliche und fachlich versierte Kraft in IT-Entwicklungsprojekten."
       },
       "testimonial3": {
         "name": "Andreas",
-        "designation": "Senior Engineer",
+        "designation": "Leitender Softwareentwickler",
         "company": "NXP Semiconductors",
         "body": "Während seiner Zeit bei NXP zeigte Ahmed großes Engagement bei der Koordination bereichsübergreifender Aufgaben. Er war entscheidend dafür, dass unser Fahrplan eingehalten wurde und die Zusammenarbeit zwischen Frontend und Backend reibungslos verlief. Seine Führung war dezent, aber äußerst wirkungsvoll."
       }

@@ -1,0 +1,1 @@
+export const MY_EMAIL_ADDRESS = "contact@ahmedmahmoud.de";

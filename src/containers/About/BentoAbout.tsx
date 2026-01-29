@@ -5,6 +5,7 @@ import { IBentoAboutContent, useContent } from "@/hooks";
 import { SectionWrapper } from "@/hocs";
 import { Image } from "@/components";
 import { grid1, grid2, grid3, tick, copy, vr } from "@/assets";
+import { MY_EMAIL_ADDRESS } from "@/constants";
 
 const tiles = [
   {
@@ -178,7 +179,7 @@ const About = () => {
                       tailWindHeight={"h-16"}
                     />
                     <p className="lg:text-lg md:text-xl font-medium text-gray_gradient text-white">
-                      a.samyabdelhay@gmail.com
+                      {MY_EMAIL_ADDRESS}
                     </p>
                   </button>
                 )}

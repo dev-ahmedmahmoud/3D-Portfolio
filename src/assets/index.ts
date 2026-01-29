@@ -26,6 +26,7 @@ const tailwind = "/imgs/tech/tailwind.webp";
 const typescript = "/imgs/tech/typescript.webp";
 const syncology = "/imgs/company/syncology.webp";
 const unitedprint = "/imgs/company/unitedprint.webp";
+const nxp = "/imgs/company/nxp.webp";
 const upwork = "/imgs/company/upwork.webp";
 const xr = "/imgs/company/xr.webp";
 const carrent = "/imgs/carrent.webp";
@@ -81,6 +82,7 @@ export {
   upwork,
   unitedprint,
   xr,
+  nxp,
   carrent,
   jobit,
   projectPortfolio,

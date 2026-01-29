@@ -67,8 +67,7 @@
         "subText": "By combining aesthetic precision with cutting-edge Agentic AI tools, I bring ideas to life in almost no time, in ways that feel natural, engaging, and future-ready. Let’s explore how innovation in XR can transform the way we interact with technology!"
       },
       "tile5": {
-        "subText": "Contact me",
-        "copyButtonText": "contact@ahmedmahmoud.de"
+        "subText": "Contact me"
       }
     }
   },
@@ -77,7 +76,7 @@
     "subHeadline": "What I Have Done So Far",
     "experiences": {
       "reactAndReactNative": {
-        "title": "React.js / React Native Developer",
+        "title": "React.js/React Native Developer",
         "companyName": "Freelancer",
         "date": "Jan 2017 - Oct 2020",
         "points": {
@@ -88,7 +87,7 @@
         }
       },
       "cto": {
-        "title": "Chief Technolofy Officer",
+        "title": "Technical Co-Founder",
         "companyName": "Syncology eServices",
         "date": "Jan 2020 - Present",
         "points": {
@@ -97,7 +96,7 @@
         }
       },
       "nextjs": {
-        "title": "Nextjs Developer",
+        "title": "React.js/Next.js Developer",
         "companyName": "unitedprint SE",
         "date": "Dec 2020 - Present",
         "points": {
@@ -157,16 +156,16 @@
     "testimonialsSubheadline": "Testimonials",
     "testimonials": {
       "testimonial1": {
-        "name": "Anne",
+        "name": "Michael",
         "designation": "Frontend Lead",
         "company": "unitedprint SE",
-        "body": "Ahmed has a rare ability to balance technical depth with strategic foresight. His planning skills kept our sprints focused and efficient, and his micro-leadership style empowered junior developers to contribute confidently. Working with him elevated the entire frontend team."
+        "body": "Ahmed was always up to date with the latest technology and incorporated current developments into the project in a meaningful way. He was able to integrate fixes and new features cleanly without causing any unwanted side effects. He didn't just work through tasks, he proactively contributed to the modernization of the code base. His micro-leadership style empowered junior developers to contribute confidently, making him a clear technical asset to any development team."
       },
       "testimonial2": {
-        "name": "Cindy",
+        "name": "C.W",
         "designation": "Department Head",
         "company": "unitedprint SE",
-        "body": "Ahmed consistently brings clarity to complex projects. His timeline management is precise, and he’s exceptional at aligning team members around shared goals. His calm leadership and attention to detail make him a reliable force in any tech initiative."
+        "body": "Ahmed structures complex development projects efficiently and purposefully. He is a team player who actively supports colleagues and contributes to constructive and solution-oriented collaboration. He quickly grasps new topics and technologies and applies this knowledge proactively when implementing projects. His analytical approach and attention to detail make him a reliable and technically skilled asset in IT development projects."
       },
       "testimonial3": {
         "name": "Andreas",
