@@ -1,13 +1,11 @@
 "use server";
 
 import nodemailer from "nodemailer";
-import { google } from "googleapis";
 import { z } from "zod";
 
 // Internal error codes for debugging (never exposed fully to users)
 const ERR = {
   VALIDATION: "E100",
-  OAUTH: "E200",
   SMTP: "E300",
   UNKNOWN: "E999",
 };
@@ -25,7 +23,7 @@ const schema = z.object({
 });
 
 /**
- * Sends email using Gmail OAuth2.
+ * Sends email using standard SMTP (e.g., Namecheap Private Email).
  * Isolated so errors NEVER crash your app.
  */
 export async function sendEmail(
@@ -54,67 +52,34 @@ export async function sendEmail(
     const { name, email, message } = parsed.data;
 
     // ---------------------------------------
-    // 2. Initialize OAuth2 client
-    // ---------------------------------------
-    const oAuth2Client = new google.auth.OAuth2(
-      process.env.CLIENT_ID,
-      process.env.CLIENT_SECRET,
-      process.env.REDIRECT_URI // your app route, not playground
-    );
-
-    oAuth2Client.setCredentials({
-      refresh_token: process.env.REFRESH_TOKEN,
-    });
-
-    let accessToken: string | null = null;
-
-    try {
-      const resp = await oAuth2Client.getAccessToken();
-      accessToken = resp?.token ?? null;
-    } catch (err) {
-      console.error("OAuth2 error:", err);
-      return {
-        success: false,
-        error: "Email service temporarily unavailable.",
-        code: ERR.OAUTH,
-      };
-    }
-
-    if (!accessToken) {
-      return {
-        success: false,
-        error: "Email service error. Please try again later.",
-        code: ERR.OAUTH,
-      };
-    }
-
-    // ---------------------------------------
-    // 3. Create transporter
+    // 2. Create transporter with SMTP settings
     // ---------------------------------------
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: true,
       auth: {
-        type: "OAuth2",
-        user: process.env.EMAIL_USER,
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-        refreshToken: process.env.REFRESH_TOKEN,
-        accessToken: accessToken,
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
+      tls: {
+        rejectUnauthorized: false
+      }
     });
 
     // ---------------------------------------
-    // 4. Prepare mail
+    // 3. Prepare mail
     // ---------------------------------------
     const mailOptions = {
-      from: `"${name}" <${email}>`,
-      to: process.env.EMAIL_USER,
-      subject: "New message from your portfolio",
-      text: message,
+      from: `"${name}" <${process.env.SMTP_USER}>`,
+      to: process.env.SMTP_USER,
+      replyTo: email,
+      subject: `Portfolio: New message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     };
 
     // ---------------------------------------
-    // 5. Send email with safety guard
+    // 4. Send email with safety guard
     // ---------------------------------------
     try {
       await transporter.sendMail(mailOptions);
