@@ -6,7 +6,7 @@ import { useContent, IExperienceContent } from "@/hooks";
 import { AnimatedSectionHead, ExperienceStage, Loader } from "@/components";
 import { Developer } from "@/canvas";
 
-const ANIMATIONS = ["victory", "clapping", "salute", "victory"];
+const ANIMATIONS = ["golf", "kick", "shoot1", "shoot2", "box"];
 
 const WorkExperience = () => {
   const experienceContent = useContent("experience")() as IExperienceContent;
@@ -37,9 +37,11 @@ const WorkExperience = () => {
             <Suspense fallback={<Loader />}>
               <Developer
                 position-y={-3}
-                scale={2.7}
+                scale={2.5}
                 animationName={animationName}
-                rotation-x={0.4}
+                rotation-x={-45}
+                rotation-z={0}
+                rotation-y={0}
               />
             </Suspense>
           </Canvas>

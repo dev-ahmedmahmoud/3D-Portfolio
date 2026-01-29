@@ -12,38 +12,43 @@ const Developer = ({ animationName = "idle", ...props }) => {
   const { nodes, materials } = useGraph(clone);
 
   const { animations: idleAnimation } = useFBX("/models/animations/idle.fbx");
-  const { animations: saluteAnimation } = useFBX(
-    "/models/animations/salute.fbx"
+  const { animations: golfAnimation } = useFBX(
+    "/models/animations/golf.fbx"
   );
-  const { animations: clappingAnimation } = useFBX(
-    "/models/animations/clapping.fbx"
+  const { animations: kickAnimation } = useFBX(
+    "/models/animations/kick.fbx"
   );
-  const { animations: victoryAnimation } = useFBX(
-    "/models/animations/victory.fbx"
+  const { animations: shoot1Animation } = useFBX(
+    "/models/animations/shoot1.fbx"
   );
-  const { animations: breakAnimation } = useFBX(
-    "/models/animations/break.fbx"
+  const { animations: shoot2Animation } = useFBX(
+    "/models/animations/shoot2.fbx"
+  );
+  const { animations: boxAnimation } = useFBX(
+    "/models/animations/box.fbx"
   );
 
   idleAnimation[0].name = "idle";
-  saluteAnimation[0].name = "salute";
-  clappingAnimation[0].name = "clapping";
-  victoryAnimation[0].name = "victory";
-  breakAnimation[0].name = "break";
+  golfAnimation[0].name = "golf";
+  kickAnimation[0].name = "kick";
+  shoot1Animation[0].name = "shoot1";
+  shoot2Animation[0].name = "shoot2";
+  boxAnimation[0].name = "box";
 
   const { actions } = useAnimations(
     [
       idleAnimation[0],
-      saluteAnimation[0],
-      clappingAnimation[0],
-      victoryAnimation[0],
-      breakAnimation[0],
+      golfAnimation[0],
+      kickAnimation[0],
+      shoot1Animation[0],
+      shoot2Animation[0],
+      boxAnimation[0],
     ],
     group
   );
 
   useEffect(() => {
-    actions[animationName]?.reset().fadeIn(0.5).play();
+    actions[animationName]?.reset().play();
     return () => {
       actions[animationName]?.fadeOut(0.5);
     };
@@ -56,11 +61,6 @@ const Developer = ({ animationName = "idle", ...props }) => {
         geometry={(nodes.Wolf3D_Hair as Mesh).geometry}
         material={materials.Wolf3D_Hair}
         skeleton={(nodes.Wolf3D_Hair as SkinnedMesh).skeleton}
-      />
-      <skinnedMesh
-        geometry={(nodes.Wolf3D_Glasses as Mesh).geometry}
-        material={materials.Wolf3D_Glasses}
-        skeleton={(nodes.Wolf3D_Glasses as SkinnedMesh).skeleton}
       />
       <skinnedMesh
         geometry={(nodes.Wolf3D_Body as Mesh).geometry}
@@ -119,11 +119,11 @@ const Developer = ({ animationName = "idle", ...props }) => {
 };
 
 useGLTF.preload("/models/animations/developer.glb");
-useFBX.preload("/models/animations/idle.fbx");
-useFBX.preload("/models/animations/salute.fbx");
-useFBX.preload("/models/animations/clapping.fbx");
-useFBX.preload("/models/animations/victory.fbx");
-useFBX.preload("/models/animations/break.fbx");
+useFBX.preload("/models/animations/box.fbx");
+useFBX.preload("/models/animations/golf.fbx");
+useFBX.preload("/models/animations/kick.fbx");
+useFBX.preload("/models/animations/shoot1.fbx");
+useFBX.preload("/models/animations/shoot2.fbx");
 
 
 export default Developer;

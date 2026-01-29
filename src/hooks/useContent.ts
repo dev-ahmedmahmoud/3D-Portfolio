@@ -218,9 +218,20 @@ export const useContent = (section: ContentSection): ContentReturnType => {
           ],
         },
         {
+          title: t("experiences.nxp.title"),
+          date: t("experiences.nxp.date"),
+          iconBg: "#E6DEDD",
+          icon: nxp,
+          companyName: t("experiences.nxp.companyName"),
+          points: [
+            t("experiences.nxp.points.point1"),
+            t("experiences.nxp.points.point2"),
+          ],
+        },
+        {
           title: t("experiences.cto.title"),
           date: t("experiences.cto.date"),
-          iconBg: "#E6DEDD",
+          iconBg: "#383E56",
           icon: syncology,
           companyName: t("experiences.cto.companyName"),
           points: [
@@ -231,7 +242,7 @@ export const useContent = (section: ContentSection): ContentReturnType => {
         {
           title: t("experiences.nextjs.title"),
           date: t("experiences.nextjs.date"),
-          iconBg: "#383E56",
+          iconBg: "#E6DEDD",
           icon: unitedprint,
           companyName: t("experiences.nextjs.companyName"),
           points: [
@@ -244,7 +255,7 @@ export const useContent = (section: ContentSection): ContentReturnType => {
         {
           title: t("experiences.xr.title"),
           date: t("experiences.xr.date"),
-          iconBg: "#E6DEDD",
+          iconBg: "#383E56",
           icon: xr,
           companyName: t("experiences.xr.companyName"),
           points: [

@@ -86,6 +86,15 @@
           "point4": "Umsetzung komplexer UI/UX-Designs in pixelgenaue Komponenten mit Styled Components, Tailwind CSS und React Navigation."
         }
       },
+      "nxp": {
+        "title": "Software Entwickler",
+        "companyName": "NXP Semiconductors",
+        "date": "Apr 2019 - Nov 2020",
+        "points": {
+          "point1": "Reduzierung des manuellen Arbeitsaufwands um 60 % durch die Entwicklung eines Tools zur Massenbearbeitung und zum Vergleich Tausender Testdateien.",
+          "point2": "Beschleunigte Konfigurationsaktualisierungen um 70 % und Reduzierung menschlicher Fehler durch ein Python-Skript, das den Arbeitsablauf am Prüfstand automatisiert."
+        }
+      },
       "cto": {
         "title": "Technischer Mitbegründer",
         "companyName": "Syncology eServices",

@@ -86,6 +86,15 @@
           "point4": "Translated complex UI/UX designs into pixel-perfect components using Styled Components, Tailwind CSS, and React Navigation"
         }
       },
+      "nxp": {
+        "title": "Software Developer",
+        "companyName": "NXP Semiconductors",
+        "date": "Apr 2019 - Nov 2020",
+        "points": {
+          "point1": "Reduced manual workload by 60% by building a tool for bulk editing and comparison of thousands of test files.",
+          "point2": "Accelerated config updates by 70% and cut human error with a Python script automating test bench workflow."
+        }
+      },
       "cto": {
         "title": "Technical Co-Founder",
         "companyName": "Syncology eServices",
