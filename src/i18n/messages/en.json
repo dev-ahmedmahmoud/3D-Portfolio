@@ -80,10 +80,10 @@
         "companyName": "Freelancer",
         "date": "Jan 2017 - Oct 2020",
         "points": {
-          "point1": "Developed and deployed responsive web and mobile applications using React and React Native, optimizing performance across iOS, Android, and modern browsers.",
-          "point2": "Integrated RESTful APIs and GraphQL endpoints with dynamic state management using Redux, Context API, and custom hooks.",
-          "point3": "Led front-end testing initiatives with Jest and React Testing Library, ensuring 95%+ code coverage and smooth CI/CD pipelines.",
-          "point4": "Translated complex UI/UX designs into pixel-perfect components using Styled Components, Tailwind CSS, and React Navigation"
+          "point1": "Developed and deployed responsive web and mobile applications using React and React Native, optimizing performance across iOS, Android, and modern browsers",
+          "point2": "Integrated RESTful APIs and GraphQL endpoints with dynamic state management using Redux, Context API, and custom hooks",
+          "point3": "Led front-end testing initiatives with Jest and React Testing Library, ensuring 95%+ code coverage and smooth CI/CD pipelines",
+          "point4": "Translated complex UI/UX designs into pixel-perfect components using Styled Components, and React Navigation"
         }
       },
       "nxp": {
@@ -91,17 +91,17 @@
         "companyName": "NXP Semiconductors",
         "date": "Apr 2019 - Nov 2020",
         "points": {
-          "point1": "Reduced manual workload by 60% by building a tool for bulk editing and comparison of thousands of test files.",
-          "point2": "Accelerated config updates by 70% and cut human error with a Python script automating test bench workflow."
+          "point1": "Reduced manual workload by 60% by building a tool for bulk editing and comparison of thousands of test files",
+          "point2": "Accelerated config updates by 70% and cut human error with a Python script automating test bench workflow"
         }
       },
       "cto": {
         "title": "Technical Co-Founder",
         "companyName": "Syncology eServices",
-        "date": "Jan 2020 - Present",
+        "date": "Oct 2020 - May 2023",
         "points": {
-          "point1": "I lead the architecture and development of comprehensive software solutions tailored for educational institutions across the globe. My focus spans the full lifecycle of our core platforms—EduSync LMS, a robust Learning Management System, and EduSync SMS, a complete School Management System—each designed to adapt to the diverse needs of various educational systems worldwide.",
-          "point2": "From product strategy and technical oversight to ensuring scalability and adaptability, I drive the vision behind creating intelligent, user-centric platforms that simplify and enhance the educational experience for students, educators, and administrators alike."
+          "point1": "Identified a critical challenge faced by Egyptian educational institutions during the pandemic and founded a company to digitize the largely paper‑based system used in over 90% of schools",
+          "point2": "Led a team of developers and implementers to build digital infrastructure atop open-source platforms, accelerating development, customization, and deployment across institutions—all within just 3 months"
         }
       },
       "nextjs": {
@@ -109,21 +109,18 @@
         "companyName": "unitedprint SE",
         "date": "Dec 2020 - Present",
         "points": {
-          "point1": "Built high-performance, SEO-optimized, multilingual web applications using Next.js, leveraging server-side rendering (SSR) and static site generation (SSG).",
-          "point2": "Integrated dynamic APIs and third-party services with middleware, routing, and API routes for scalable backend logic",
-          "point3": "Designed modular, reusable components with TypeScript, Tailwind CSS, and React Query for clean architecture.",
-          "point4": "Incremental and full migration from pages router architecture to app router architecture powered by React Server Components."
+          "point1": "Integrated new features into a legacy Next.js codebase without degrading performance, enabling continued product evolution while preserving system stability",
+          "point2": "While concurrently delivering business demanding features, I proactively modernized the codebase by replacing unnecessary custom logic with industry-standard libraries, reducing technical debt and accelerating development velocity",
+          "point3": "Planned and executed a phased migration from Next.js 12 to 14 with minimal disruptive changes, resulting in a 60% average reduction in page load time",
+          "point4": "Aligned business demand of heavy-asset product pages with stakeholders concerns about the increase of page load time, by adopting Next.js caching strategies in a controlled, non-aggressive manner tailored to the platform’s architecture"
         }
       },
       "xr": {
-        "title": "XR Developer",
+        "title": "WebXR Developer",
         "companyName": "Freelancer",
-        "date": "Jan 2025 - Present",
+        "date": "Nov 2025 - Present",
         "points": {
-          "point1": "Developed immersive XR experiences using Unity, WebXR, and Three.js, tailored for Meta Quest and browser-based platforms.",
-          "point2": "Implemented spatial interactions, gesture recognition, and physics-based environments for realistic user engagement.",
-          "point3": "Integrated XR content with backend systems using Firebase, GraphQL, and real-time data streams.",
-          "point4": "Delivered cross-platform prototypes for AR, VR, and MR, optimizing performance across mobile, headset, and desktop devices."
+          "point1": "Exploring the delivery of XR products end‑to‑end through personal projects, and feedback from surrounding network"
         }
       }
     }

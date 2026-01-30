@@ -260,9 +260,6 @@ export const useContent = (section: ContentSection): ContentReturnType => {
           companyName: t("experiences.xr.companyName"),
           points: [
             t("experiences.xr.points.point1"),
-            t("experiences.xr.points.point2"),
-            t("experiences.xr.points.point3"),
-            t("experiences.xr.points.point4"),
           ],
         },
       ],

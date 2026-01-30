@@ -80,10 +80,10 @@
         "companyName": "Freiberufler",
         "date": "Jan 2017 - Oct 2020",
         "points": {
-          "point1": "Entwicklung und Bereitstellung responsiver Web- und Mobile-Anwendungen mit React und React Native, optimiert für iOS, Android und moderne Browser.",
-          "point2": "Integration von RESTful APIs und GraphQL-Endpunkten mit dynamischem State-Management über Redux, Context API und benutzerdefinierte Hooks.",
-          "point3": "Leitung von Frontend-Testprozessen mit Jest und React Testing Library, mit über 95 % Codeabdeckung und stabilen CI/CD-Pipelines.",
-          "point4": "Umsetzung komplexer UI/UX-Designs in pixelgenaue Komponenten mit Styled Components, Tailwind CSS und React Navigation."
+          "point1": "Entwicklung und Bereitstellung responsiver Web- und Mobile-Anwendungen mit React und React Native, optimiert für iOS, Android und moderne Browser",
+          "point2": "Integration von RESTful APIs und GraphQL-Endpunkten mit dynamischem State-Management über Redux, Context API und benutzerdefinierte Hooks",
+          "point3": "Leitung von Frontend-Testprozessen mit Jest und React Testing Library, mit über 95% Codeabdeckung und stabilen CI/CD-Pipelines",
+          "point4": "Umsetzung komplexer UI/UX-Designs in pixelgenaue Komponenten mit Styled Components und React Navigation"
         }
       },
       "nxp": {
@@ -91,17 +91,17 @@
         "companyName": "NXP Semiconductors",
         "date": "Apr 2019 - Nov 2020",
         "points": {
-          "point1": "Reduzierung des manuellen Arbeitsaufwands um 60 % durch die Entwicklung eines Tools zur Massenbearbeitung und zum Vergleich Tausender Testdateien.",
-          "point2": "Beschleunigte Konfigurationsaktualisierungen um 70 % und Reduzierung menschlicher Fehler durch ein Python-Skript, das den Arbeitsablauf am Prüfstand automatisiert."
+          "point1": "Reduzierung des manuellen Arbeitsaufwands um 60 % durch die Entwicklung eines Tools zur Massenbearbeitung und zum Vergleich Tausender Testdateien",
+          "point2": "Beschleunigte Konfigurationsaktualisierungen um 70 % und Reduzierung menschlicher Fehler durch ein Python-Skript, das den Arbeitsablauf am Prüfstand automatisiert"
         }
       },
       "cto": {
         "title": "Technischer Mitbegründer",
         "companyName": "Syncology eServices",
-        "date": "Jan 2020 - Present",
+        "date": "Oct 2020 - May 2023",
         "points": {
-          "point1": "Ich leite die Architektur und Entwicklung umfassender Softwarelösungen, die speziell für Bildungseinrichtungen weltweit entwickelt wurden. Mein Fokus erstreckt sich über den gesamten Lebenszyklus unserer Kernplattformen—EduSync LMS, ein robustes Lernmanagementsystem, und EduSync SMS, ein vollständiges Schulverwaltungssystem—die jeweils so konzipiert sind, dass sie den unterschiedlichen Anforderungen verschiedener Bildungssysteme weltweit gerecht werden.",
-          "point2": "Von der Produktstrategie und technischen Aufsicht bis hin zur Sicherstellung von Skalierbarkeit und Anpassungsfähigkeit treibe ich die Vision voran, intelligente, benutzerzentrierte Plattformen zu schaffen, die das Bildungserlebnis für Studierende, Lehrende und Verwaltungsmitarbeiter gleichermaßen vereinfachen und verbessern."
+          "point1": "Identifizierte eine kritische Herausforderung, mit der ägyptische Bildungseinrichtungen während der Pandemie konfrontiert waren, und gründete ein Unternehmen zur Digitalisierung des weitgehend papierbasierten Systems, das in über 90 % der Schulen verwendet wird",
+          "point2": "Leitung eines Teams aus Entwicklern und Implementierern zum Aufbau einer digitalen Infrastruktur auf Open-Source-Plattformen, wodurch die Entwicklung, Anpassung und Bereitstellung in verschiedenen Institutionen beschleunigt wurde – und das alles innerhalb von nur drei Monaten"
         }
       },
       "nextjs": {
@@ -109,21 +109,18 @@
         "companyName": "unitedprint SE",
         "date": "Dec 2020 - Present",
         "points": {
-          "point1": "Entwicklung leistungsstarker, SEO-optimierter Webanwendungen mit Next.js, unter Nutzung von Server-Side Rendering (SSR) und Static Site Generation (SSG).",
-          "point2": "Integration dynamischer APIs und externer Dienste über Middleware, Routing und API-Routen für skalierbare Backend-Logik.",
-          "point3": "Gestaltung modularer, wiederverwendbarer Komponenten mit TypeScript, Tailwind CSS und React Query für saubere Architektur und schnelle Entwicklung.",
-          "point4": "Inkrementelle und vollständige Migration von der Seiten-Router-Architektur zur App-Router-Architektur, unterstützt durch React Server Components."
+          "point1": "Integration neuer Funktionen in eine bestehende Next.js-Codebasis ohne Leistungseinbußen, wodurch eine kontinuierliche Produktentwicklung bei gleichbleibender Systemstabilität ermöglicht wird",
+          "point2": "Während ich gleichzeitig geschäftskritische Funktionen bereitstellte, modernisierte ich proaktiv die Codebasis, indem ich unnötige benutzerdefinierte Logik durch branchenübliche Bibliotheken ersetzte, wodurch technische Schulden reduziert und die Entwicklungsgeschwindigkeit beschleunigt wurden",
+          "point3": "Planung und Durchführung einer schrittweisen Migration von Next.js 12 auf 14 mit minimalen störenden Änderungen, was zu einer durchschnittlichen Reduzierung der Ladezeit von Seiten um 60 % führte",
+          "point4": "Ausrichtung der geschäftlichen Anforderungen an Produktseiten mit umfangreichen Inhalten auf die Bedenken der Stakeholder hinsichtlich der Verlängerung der Ladezeiten durch den kontrollierten, nicht aggressiven Einsatz von Next.js-Caching-Strategien, die auf die Architektur der Plattform zugeschnitten sind"
         }
       },
       "xr": {
-        "title": "XR Developer",
+        "title": "WebXR Developer",
         "companyName": "Freelancer",
-        "date": "Jan 2025 - Present",
+        "date": "Nov 2025 - Present",
         "points": {
-          "point1": "Entwicklung immersiver XR-Erlebnisse mit Unity, WebXR und Three.js, angepasst für Meta Quest und browserbasierte Plattformen.",
-          "point2": "Umsetzung räumlicher Interaktionen, Gestenerkennung und physikbasierter Umgebungen für realistische Nutzererlebnisse.",
-          "point3": "Integration von XR-Inhalten mit Backend-Systemen über Firebase, GraphQL und Echtzeit-Datenströme",
-          "point4": "Bereitstellung plattformübergreifender Prototypen für AR, VR und MR, optimiert für Mobilgeräte, Headsets und Desktop-Systeme."
+          "point1": "Erforschung der End-to-End-Bereitstellung von XR-Produkten durch persönliche Projekte und Feedback aus dem Umfeld"
         }
       }
     }

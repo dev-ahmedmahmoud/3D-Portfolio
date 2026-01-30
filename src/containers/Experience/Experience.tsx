@@ -36,10 +36,10 @@ const WorkExperience = () => {
 
             <Suspense fallback={<Loader />}>
               <Developer
-                position-y={-3}
+                position-y={-2.5}
                 scale={2.5}
                 animationName={animationName}
-                rotation-x={-45}
+                rotation-x={-Math.PI / 3}
                 rotation-z={0}
                 rotation-y={0}
               />
