@@ -14,8 +14,113 @@ const PreloadVideo = ({ texture }: { texture: string }) => {
 
 export const myProjects = [
   {
-    href: "https://portfolio.ahmedmahmoud.de",
+    href: "https://infowerk.com",
     texture: "/textures/project/project1.mp4",
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Redux",
+        path: "/imgs/tech/redux.webp",
+      },
+      {
+        id: 3,
+        name: "Scss",
+        path: "/imgs/tech/scss.webp",
+      },
+    ],
+  },
+  {
+    href: "https://infowerk.com/de/freedesign/#item_group_id=75&delivery_country_code=DE&properties=3766|4560|4357|4396|4382|4365|7012|115|7174|6675|823|840|340|3764&variants=27&product_alias_id=97&label=T-Shirts&is_design_empty=true",
+    texture: "/textures/project/project2.mp4",
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Redux",
+        path: "/imgs/tech/redux.webp",
+      },
+      {
+        id: 3,
+        name: "Scss",
+        path: "/imgs/tech/scss.webp",
+      },
+    ],
+  },
+  {
+    href: "https://easyprint.com",
+    texture: "/textures/project/project3.mp4",
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Redux",
+        path: "/imgs/tech/redux.webp",
+      },
+      {
+        id: 3,
+        name: "Scss",
+        path: "/imgs/tech/scss.webp",
+      },
+    ],
+  },
+  {
+    href: "https://print24.com",
+    texture: "/textures/project/project4.mp4",
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Redux",
+        path: "/imgs/tech/redux.webp",
+      },
+      {
+        id: 3,
+        name: "Scss",
+        path: "/imgs/tech/scss.webp",
+      },
+    ],
+  },
+  {
+    href: "https://unitedprint.com",
+    texture: "/textures/project/project5.mp4",
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "Nextjs",
+        path: "/imgs/tech/nextjs.webp",
+      },
+      {
+        id: 2,
+        name: "Sass",
+        path: "/imgs/tech/sass.webp",
+      },
+    ],
+  },
+  {
+    href: "https://portfolio.ahmedmahmoud.de",
+    texture: "/textures/project/project6.mp4",
     spotlight: "/assets/spotlight1.png",
     tags: [
       {
@@ -42,7 +147,7 @@ export const myProjects = [
   },
   {
     href: "https://iphone15replica.ahmedmahmoud.de",
-    texture: "/textures/project/project2.mp4",
+    texture: "/textures/project/project7.mp4",
     spotlight: "/assets/spotlight2.png",
     tags: [
       {
@@ -69,7 +174,7 @@ export const myProjects = [
   },
   {
     href: "https://productmodeling.ahmedmahmoud.de",
-    texture: "/textures/project/project3.mp4",
+    texture: "/textures/project/project8.mp4",
     spotlight: "/assets/spotlight1.png",
     tags: [
       {
@@ -96,7 +201,7 @@ export const myProjects = [
   },
   {
     href: "https://ahmedmahmoud.de",
-    texture: "/textures/project/project4.mp4",
+    texture: "/textures/project/project9.mp4",
     spotlight: "/assets/spotlight2.png",
     tags: [
       {
@@ -128,7 +233,7 @@ export const myProjects = [
   },
   {
     href: "https://helloxr.ahmedmahmoud.de",
-    texture: "/textures/project/project5.mp4",
+    texture: "/textures/project/project10.mp4",
     spotlight: "/assets/spotlight1.png",
     tags: [
       {

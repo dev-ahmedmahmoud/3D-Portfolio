@@ -273,6 +273,31 @@ export const useContent = (section: ContentSection): ContentReturnType => {
       introduction: t("introduction"),
       projects: [
         {
+          name: t("projects.infowerk.name"),
+          description1: t("projects.infowerk.description1"),
+          description2: t("projects.infowerk.description2"),
+        },
+        {
+          name: t("projects.freedesign.name"),
+          description1: t("projects.freedesign.description1"),
+          description2: t("projects.freedesign.description2"),
+        },
+        {
+          name: t("projects.easyprint.name"),
+          description1: t("projects.easyprint.description1"),
+          description2: t("projects.easyprint.description2"),
+        },
+        {
+          name: t("projects.print24.name"),
+          description1: t("projects.print24.description1"),
+          description2: t("projects.print24.description2"),
+        },
+        {
+          name: t("projects.unitedprint.name"),
+          description1: t("projects.unitedprint.description1"),
+          description2: t("projects.unitedprint.description2"),
+        },
+        {
           name: t("projects.3dPortfolio.name"),
           description1: t("projects.3dPortfolio.description1"),
           description2: t("projects.3dPortfolio.description2"),

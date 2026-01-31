@@ -130,6 +130,31 @@
     "projectsSubheadline": "Projects",
     "introduction": "Real-world challenges sharpen more than just skills — they shape perspective. Each project reflects not only technical growth, but strategic thinking under pressure. From concept to deployment, I’ve learned that execution teaches what theory can’t. This section showcases the practical journey behind the knowledge I bring forward.",
     "projects": {
+      "infowerk": {
+        "name": "Infowerk: Multilingual CMS-Based Design & E-Commerce Platform",
+        "description1": "Infowerk is a multilingual e-commerce platform for ordering print and digital products, built on a legacy Next.js 12 stack with Redux and modular SCSS. Despite its heavy asset footprint, it delivers a smooth experience thanks to tailored caching strategies and careful performance tuning. The platform reflects strong architectural discipline, balancing stability with continuous improvement across a complex, image-rich environment.",
+        "description2": "I contributed by fixing critical bugs, implementing new features, and designing caching strategies that worked within the limitations of Next.js 12. Later, I planned and led the incremental migration to Next.js 14—adopting the new app architecture step by step to ensure stability, minimize risk, and unlock modern performance capabilities."
+      },
+      "freedesign": {
+        "name": "2D Design Canvas for Printable and Digital Products",
+        "description1": "freeDesign is a multilingual 2D design canvas used across Infowerk’s product ecosystem. Built with React, Redux, and modular SCSS, it enables users to create printable and digital designs through an interactive drag-and-drop interface. The tool showcases the complexity of real-time UI updates in a design-heavy environment.",
+        "description2": "Although I didn’t build the tool originally, I resolved numerous bugs and diagnosed its core performance bottleneck—an oversized Redux store updated on every interaction. My work helped clarify the architectural issues and guided the team toward more efficient state-management strategies."
+      },
+      "easyprint": {
+        "name": "Easyprint: Multilingual CMS-Based E-Commerce For Selling Printing Paper",
+        "description1": "Easyprint is a multilingual e-commerce platform focused exclusively on selling copy paper. Built as a streamlined facade of Infowerk, it delivers a simplified shopping experience while maintaining the same underlying technologies and CMS integration.",
+        "description2": "I contributed by improving stability, fixing bugs, and optimizing performance within the shared architecture. My work ensured that Easyprint remained lightweight, fast, and aligned with the broader platform ecosystem."
+      },
+      "print24": {
+        "name": "Print24: Multilingual CMS-Based Design & E-Commerce Print on Demand Platform",
+        "description1": "Print24 is a multilingual print-on-demand e-commerce platform with a cleaner, more modern architecture than earlier systems. It focuses on selling customizable print products without a design editor, enabling a fast and structured ordering flow.",
+        "description2": "I contributed from the ground up, building the entire shopping cart system and planning a modular folder structure that cleanly separates logic from JSX. The platform later underwent the same incremental migration to Next.js 14, which I helped plan and execute to ensure long-term scalability and maintainability."
+      },
+      "unitedprint": {
+        "name": "UNITEDPRINT SE: Multilingual Company Portfolio",
+        "description1": "The UNITEDPRINT SE website serves as the multilingual corporate portfolio for the company. Originally built on WordPress, it was fully migrated to an independent Next.js application powered by the company’s internal CMS and REST API ecosystem.",
+        "description2": "I planned and executed the architecture, project structure, and integration strategy for the new Next.js application. This included coordinating with the CMS and API teams to ensure a modern, scalable, and maintainable setup that now powers all company platforms."
+      },
       "3dPortfolio": {
         "name": "Multilingual 3D-Portfolio",
         "description1": "The 3D portfolio demonstrates advanced knowledge in immersive environments and animation. Smooth transitions and carefully orchestrated motion highlight strong command of modern frameworks. The result is an engaging, visually striking experience that blends technical precision with creative design. Its multilingual implementation further underlines attention to accessibility and inclusivity, ensuring the work resonates across diverse audiences.",

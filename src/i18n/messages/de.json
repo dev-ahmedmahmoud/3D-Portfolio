@@ -130,6 +130,31 @@
     "projectsSubheadline": "Projekte",
     "introduction": "Reale Herausforderungen formen mehr als nur Fähigkeiten — sie schärfen den Blick fürs Wesentliche. Jedes Projekt steht für technisches Wachstum und strategisches Denken unter echten Bedingungen. Von der Idee bis zur Umsetzung zeigt sich: Praxis lehrt, was Theorie nur andeuten kann. Dieser Abschnitt dokumentiert den Weg vom Wissen zur Anwendung — greifbar, konkret und lösungsorientiert.",
     "projects": {
+      "infowerk": {
+        "name": "Infowerk: Mehrsprachige CMS-basierte Design- & E-Commerce-Plattform",
+        "description1": "Infowerk ist eine mehrsprachige E-Commerce-Plattform für Print- und Digitalprodukte, aufgebaut auf einem älteren Next.js-12-Stack mit Redux und modularem SCSS. Trotz der enormen Datenmenge bietet die Anwendung dank maßgeschneiderter Caching-Strategien und gezielter Performance-Optimierungen ein flüssiges Nutzererlebnis. Die Plattform zeigt klare architektonische Struktur und kontinuierliche Weiterentwicklung in einer komplexen, bildlastigen Umgebung.",
+        "description2": "Ich habe zentrale Bugs behoben, neue Funktionen implementiert und Caching-Strategien entwickelt, die innerhalb der Grenzen von Next.js 12 maximale Leistung ermöglichten. Anschließend habe ich die schrittweise Migration auf Next.js 14 geplant und geleitet, um Stabilität zu sichern und moderne Performance-Features kontrolliert einzuführen."
+      },
+      "freedesign": {
+        "name": "2D-Design-Canvas für Druck- und Digitalprodukte",
+        "description1": "freeDesign ist eine mehrsprachige 2D-Design-Anwendung, die im gesamten Infowerk-Ökosystem eingesetzt wird. Entwickelt mit React, Redux und modularem SCSS, ermöglicht sie das Erstellen von Druck- und Digitaldesigns über eine interaktive Drag-and-Drop-Oberfläche. Das Tool verdeutlicht die Herausforderungen komplexer Echtzeit-UI-Updates.",
+        "description2": "Obwohl ich das Tool nicht selbst entwickelt habe, habe ich zahlreiche Bugs behoben und die zentrale Performance-Schwachstelle identifiziert: einen übergroßen Redux-Store, der bei jeder Interaktion vollständig aktualisiert wurde. Meine Analyse half dem Team, effizientere State-Management-Ansätze zu entwickeln."
+      },
+      "easyprint": {
+        "name": "Easyprint: Mehrsprachiger CMS-basierter E-Commerce für Kopierpapier",
+        "description1": "Easyprint ist eine mehrsprachige E-Commerce-Plattform, die sich ausschließlich auf den Verkauf von Kopierpapier konzentriert. Als vereinfachte Fassade von Infowerk bietet sie ein reduziertes, schnelles Einkaufserlebnis bei gleicher technologischer Basis.",
+        "description2": "Ich habe zur Stabilität und Performance beigetragen, Bugs behoben und Optimierungen innerhalb der gemeinsamen Architektur umgesetzt. Dadurch blieb Easyprint schlank, zuverlässig und perfekt in das Gesamtökosystem integriert."
+      },
+      "print24": {
+        "name": "Print24: Mehrsprachige CMS-basierte Print-on-Demand-Plattform",
+        "description1": "Print24 ist eine mehrsprachige Print-on-Demand-Plattform mit einer klareren und moderneren Architektur als frühere Systeme. Sie konzentriert sich auf den Verkauf individualisierbarer Druckprodukte ohne Design-Editor und bietet einen schnellen, strukturierten Bestellprozess.",
+        "description2": "Ich war am Aufbau von Beginn an beteiligt, entwickelte das gesamte Warenkorbsystem und plante eine modulare Projektstruktur, die Logik sauber von JSX trennt. Auch hier habe ich die schrittweise Migration auf Next.js 14 mitgestaltet, um Skalierbarkeit und Wartbarkeit langfristig zu sichern."
+      },
+      "unitedprint": {
+        "name": "UNITEDPRINT SE: Mehrsprachiges Unternehmensportfolio",
+        "description1": "Die UNITEDPRINT SE-Website ist das mehrsprachige Unternehmensportfolio des Konzerns. Ursprünglich auf WordPress aufgebaut, wurde sie vollständig in eine eigenständige Next.js-Anwendung migriert, die vom internen CMS und dem REST-API-Ökosystem betrieben wird.",
+        "description2": "Ich habe die Architektur, Projektstruktur und Integrationsstrategie der neuen Next.js-Anwendung geplant und umgesetzt. Dabei arbeitete ich eng mit dem CMS- und API-Team zusammen, um eine moderne, skalierbare und wartbare Lösung zu schaffen, die heute alle Plattformen des Unternehmens unterstützt."
+      },
       "3dPortfolio": {
         "name": "Mehrsprachig 3D-Portfolio",
         "description1": "Das 3D‑Portfolio zeigt eindrucksvoll den sicheren Umgang mit 3D‑Technologien und Animation. Fließende Übergänge und präzise Bewegungen verdeutlichen die Beherrschung moderner Frameworks. So entsteht ein Erlebnis, das Technik und Gestaltung überzeugend verbindet. Die mehrsprachige Umsetzung hebt zusätzlich den Anspruch an Zugänglichkeit und Nutzerfreundlichkeit hervor und macht das Portfolio für ein breites Publikum relevant.",
