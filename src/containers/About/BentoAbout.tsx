@@ -114,7 +114,7 @@ const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = useCallback(() => {
-    navigator.clipboard.writeText(" adrian@jsmastery.pro");
+    navigator.clipboard.writeText(" contact@ahmedmahmoud.de");
     setHasCopied(true);
 
     setTimeout(() => {
